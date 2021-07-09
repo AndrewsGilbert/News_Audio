@@ -1,0 +1,27 @@
+{
+  "name": "news-audio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ref": "ts-node test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "cheerio": "*",
+    "express": "*",
+    "file-system": "*",
+    "node-cron": "*",
+    "path": "*",
+    "request": "*",
+    "ts-node": "*"
+  },
+  "devDependencies": {
+    "@types/express": "*",
+    "@types/node-cron": "*",
+    "@types/request": "*"
+  }
+}

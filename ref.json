@@ -1,0 +1,72 @@
+{
+  "web": [
+    {
+      "id": 1,
+      "name": "The Economic Times",
+      "url": "https://economictimes.indiatimes.com/news/economy/articlelist/1286551815.cms",
+      "selector": [
+        "#pageContent > div.tabdata > div:nth-child(1) > h3 > a",
+        "#pageContent > div.tabdata > div:nth-child(2) > h3 > a",
+        "#pageContent > div.tabdata > div:nth-child(3) > h3 > a",
+        "#pageContent > div.tabdata > div:nth-child(4) > h3 > a",
+        "#pageContent > div.tabdata > div:nth-child(8) > h3 > a"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Financial Express",
+      "url": "https://www.financialexpress.com/economy/",
+      "selector": [
+        ".fewrapper > div.leftcol > div.listtopbox.mt20 > div.pstsummary > h2 > a",
+        ".fewrapper > div.leftcol > div.mnews-section.hidden > div > div > div:nth-child(1) > div > h2 > a",
+        ".fewrapper > div.leftcol > div.mnews-section.hidden > div > div > div:nth-child(2) > div > h2 > a",
+        ".fewrapper > div.leftcol > div.mnews-section.hidden > div > div > div:nth-child(3) > div > h2 > a",
+        ".fewrapper > div.leftcol > div.listingbox > div:nth-child(1) > div.content-list > h3 > a"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Money Control",
+      "url": "https://www.moneycontrol.com/news/business/economy/",
+      "selector": [
+        "#newslist-0 > h2 > a",
+        "#newslist-1 > h2 > a",
+        "#newslist-2 > h2 > a",
+        "#newslist-3 > h2 > a",
+        "#newslist-4 > h2 > a"
+      ]
+    }
+  ],
+  "newsObject": [
+    {
+      "webId": 2,
+      "news": [
+        "Pankaj Chaudhary takes charge as minister of state for finance",
+        "Economy recovering due to targeted fiscal relief, rapid vaccination: Finance Ministry",
+        "High petrol, diesel prices making milk, food, oils costlier too",
+        "Cabinet nod: Modified Rs 1-lakh-crore Agriculture Infrastructure Fund to help mandis upgrade",
+        "Crop Insurance: Centre open to ‘Beed formula’, writes to states"
+      ]
+    },
+    {
+      "webId": 1,
+      "news": [
+        "Lens on goodwill tax: Last 5 years’ M&A deals likely to be reviewed",
+        "Fall in outward remittances good news for India's current account",
+        "Finance ministry releases Rs 9,871 crore grant to 17 states",
+        "Income Tax department issues refunds worth Rs 37,050 crore till July 5",
+        "11 million avail Rs 2.75 lakh crore under govt’s credit guarantee scheme"
+      ]
+    },
+    {
+      "webId": 3,
+      "news": [
+        "Zomato IPO | Stock market valuation benchmarks might have to change",
+        "Moneycontrol Pro Panorama | Jobs worry? Tech sector job addition holds out hope",
+        "India exports 4.75 million tonnes of sugar so far this year: AISTA",
+        "Economy recovering due to targeted fiscal relief, rapid vaccination: Finance Ministry",
+        "BSE acted as catalyst in helping India create $3 trillion in wealth: Ashishkumar Chauhan"
+      ]
+    }
+  ]
+}
