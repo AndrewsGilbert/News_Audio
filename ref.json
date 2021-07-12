@@ -39,52 +39,52 @@
   ],
   "newsObject": [
     {
-      "webId": 2,
+      "webId": 1,
       "newsDet": [
         {
-          "text": "Weaving success: New textiles minister Piyush Goyal to review Rs 10,683-crore PLI scheme",
-          "audio": "voice/id:2,0.wav"
+          "text": "Recast loans at non-bank lenders may double by this fiscal-end: Report",
+          "audio": "voice/webId:1-ind:0-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Kharif sowing picks up pace, even as rainfall gets delayed",
-          "audio": "voice/id:2,1.wav"
+          "text": "IFSCA issues norms for setting up, operating ITFS to provide trade finance",
+          "audio": "voice/webId:1-ind:1-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Over 90% jump in direct tax receipts in Q1, annual target may be surpassed",
-          "audio": "voice/id:2,2.wav"
+          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
+          "audio": "voice/webId:1-ind:2-MonJul12202122:58:00.wav"
         },
         {
-          "text": "COVID-19: Around 390 families have applied for financial aid under Delhi govt scheme",
-          "audio": "voice/id:2,3.wav"
+          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
+          "audio": "voice/webId:1-ind:3-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Newly-appointed Steel Minister R C P Singh to review PSU performance this week",
-          "audio": "voice/id:2,4.wav"
+          "text": "Zeta aims higher with ‘Infinite Scalability’",
+          "audio": "voice/webId:1-ind:4-MonJul12202122:58:00.wav"
         }
       ]
     },
     {
-      "webId": 1,
+      "webId": 2,
       "newsDet": [
         {
-          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
-          "audio": "voice/id:1,0.wav"
+          "text": "Base effect drives up IIP growth to 29.3% in May",
+          "audio": "voice/webId:2-ind:0-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
-          "audio": "voice/id:1,1.wav"
+          "text": "PM calls for post-harvest revolution in farm sector",
+          "audio": "voice/webId:2-ind:1-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Zeta aims higher with ‘Infinite Scalability’",
-          "audio": "voice/id:1,2.wav"
+          "text": "Retail inflation remains high at 6.26%, IIP soars on account of base effect",
+          "audio": "voice/webId:2-ind:2-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Forex reserves rise by $1.013 billion to record high of $610.012 billion",
-          "audio": "voice/id:1,3.wav"
+          "text": "Billionaire Gautam Adani sees Indian economy growing to $15 trillion in two decades",
+          "audio": "voice/webId:2-ind:3-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Lens on goodwill tax: Last 5 years’ M&A deals likely to be reviewed",
-          "audio": "voice/id:1,4.wav"
+          "text": "Retail inflation in June eases marginally to 6.26% from 6.3% in May",
+          "audio": "voice/webId:2-ind:4-MonJul12202122:58:00.wav"
         }
       ]
     },
@@ -92,24 +92,24 @@
       "webId": 3,
       "newsDet": [
         {
-          "text": "Cairn case — End the tax tension",
-          "audio": "voice/id:3,0.wav"
+          "text": "Yellen urges EU to back global tax deal, consider more fiscal support",
+          "audio": "voice/webId:3-ind:0-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Rising fuel price to have cascading effect on essential goods, limit purchasing power of consumers: Dow's Fiona Boal",
-          "audio": "voice/id:3,1.wav"
+          "text": "June CPI at 6.26%: Higher inflation adds to MPC’s woes, but growth focus will continue, say economists",
+          "audio": "voice/webId:3-ind:1-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Coronavirus News Highlights: Haryana reports 36 new positive cases, 8 deaths in past 24 hours",
-          "audio": "voice/id:3,2.wav"
+          "text": "More power lines or rooftop solar panels: The fight over energy’s future",
+          "audio": "voice/webId:3-ind:2-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Moneycontrol Pro Weekender | Fire and ice",
-          "audio": "voice/id:3,3.wav"
+          "text": "Sales and IT functions are outliers in salary hikes, shows TeamLease report",
+          "audio": "voice/webId:3-ind:3-MonJul12202122:58:00.wav"
         },
         {
-          "text": "Say no to 9-5: Is 'work your own hours' the next big HR trend?",
-          "audio": "voice/id:3,4.wav"
+          "text": "Small, Beautiful & Strong | Tech for Skills",
+          "audio": "voice/webId:3-ind:4-MonJul12202122:58:00.wav"
         }
       ]
     }
