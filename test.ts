@@ -1,10 +1,11 @@
 import express from 'express'
 import fs from 'fs'
 import request from 'request'
-import cheerio, { Cheerio } from 'cheerio'
+import cheerio from 'cheerio'
 import bodyParser from 'body-parser'
 import path from 'path'
 import cron from 'node-cron'
+import { exec } from 'child_process'
 const app = express()
 
 app.use(bodyParser.urlencoded({
@@ -18,9 +19,15 @@ type web = {
     selector:Array<string>
 }
 
+type newsContent = {
+    text:string
+    audio:string
+}
+
 type news = {
     webId: number
-    news:Array<string>
+    newsDet: Array<newsContent>
+
 }
 
 type content = {
@@ -28,7 +35,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('5 9 * * *', function () {
+cron.schedule('23 9 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -44,21 +51,41 @@ cron.schedule('5 9 * * *', function () {
          
             if (!err && resp.statusCode === 200) {
 
-                let newsText: Array<string> = []
+              let news: Array<newsContent> = []
+         
   
                 for (let j: number = 0; j < selector.length; j++) {
         
-                    const selectorId: string = selector[j]
-                    const $ = cheerio.load(html)
-                    const dataPath = $(selectorId)
-                    const data: any = dataPath.text()
-                    newsText[j] = data
+                  const selectorId: string = selector[j]
+                  const $ = cheerio.load(html)
+                  const dataPath = $(selectorId)
+                  const data: any = dataPath.text()
+                  
+                  let newsDetail = <newsContent>{}
+                  newsDetail.text = data
+                  const fileName = 'voice/id:' + id + ',' + j + '.wav'
+                  newsDetail.audio = fileName
+                  news[j] = newsDetail
+                  
+                   exec(`./tts --text "${data}" --out_path ${fileName}`, (error, stdout, stderr) => {
+                      if (error) {
+                        console.log(`error: ${error.message}`)
+                        return
+                      }
+                      if (stderr) {
+                        console.log(`stderr: ${stderr}`)
+                        return
+                      }
+                      console.log(`stdout: ${stdout}`)
+                    }) 
+                  
+
                 }
 
+                const index = newsObject.length
                 let detail = <news>{}
                 detail.webId = id
-                detail.news = newsText
-                const index = newsObject.length
+                detail.newsDet = news
                 newsObject[index] = detail
             
                 fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
@@ -69,6 +96,6 @@ cron.schedule('5 9 * * *', function () {
 
 
   
-/* app.listen(8586, function () {
+ app.listen(8586, function () {
   console.log('Node server is running 8586..')
-}) */
+})

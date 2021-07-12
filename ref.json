@@ -40,32 +40,77 @@
   "newsObject": [
     {
       "webId": 2,
-      "news": [
-        "Pankaj Chaudhary takes charge as minister of state for finance",
-        "Economy recovering due to targeted fiscal relief, rapid vaccination: Finance Ministry",
-        "High petrol, diesel prices making milk, food, oils costlier too",
-        "Cabinet nod: Modified Rs 1-lakh-crore Agriculture Infrastructure Fund to help mandis upgrade",
-        "Crop Insurance: Centre open to ‘Beed formula’, writes to states"
+      "newsDet": [
+        {
+          "text": "Weaving success: New textiles minister Piyush Goyal to review Rs 10,683-crore PLI scheme",
+          "audio": "voice/id:2,0.wav"
+        },
+        {
+          "text": "Kharif sowing picks up pace, even as rainfall gets delayed",
+          "audio": "voice/id:2,1.wav"
+        },
+        {
+          "text": "Over 90% jump in direct tax receipts in Q1, annual target may be surpassed",
+          "audio": "voice/id:2,2.wav"
+        },
+        {
+          "text": "COVID-19: Around 390 families have applied for financial aid under Delhi govt scheme",
+          "audio": "voice/id:2,3.wav"
+        },
+        {
+          "text": "Newly-appointed Steel Minister R C P Singh to review PSU performance this week",
+          "audio": "voice/id:2,4.wav"
+        }
       ]
     },
     {
       "webId": 1,
-      "news": [
-        "Lens on goodwill tax: Last 5 years’ M&A deals likely to be reviewed",
-        "Fall in outward remittances good news for India's current account",
-        "Finance ministry releases Rs 9,871 crore grant to 17 states",
-        "Income Tax department issues refunds worth Rs 37,050 crore till July 5",
-        "11 million avail Rs 2.75 lakh crore under govt’s credit guarantee scheme"
+      "newsDet": [
+        {
+          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
+          "audio": "voice/id:1,0.wav"
+        },
+        {
+          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
+          "audio": "voice/id:1,1.wav"
+        },
+        {
+          "text": "Zeta aims higher with ‘Infinite Scalability’",
+          "audio": "voice/id:1,2.wav"
+        },
+        {
+          "text": "Forex reserves rise by $1.013 billion to record high of $610.012 billion",
+          "audio": "voice/id:1,3.wav"
+        },
+        {
+          "text": "Lens on goodwill tax: Last 5 years’ M&A deals likely to be reviewed",
+          "audio": "voice/id:1,4.wav"
+        }
       ]
     },
     {
       "webId": 3,
-      "news": [
-        "Zomato IPO | Stock market valuation benchmarks might have to change",
-        "Moneycontrol Pro Panorama | Jobs worry? Tech sector job addition holds out hope",
-        "India exports 4.75 million tonnes of sugar so far this year: AISTA",
-        "Economy recovering due to targeted fiscal relief, rapid vaccination: Finance Ministry",
-        "BSE acted as catalyst in helping India create $3 trillion in wealth: Ashishkumar Chauhan"
+      "newsDet": [
+        {
+          "text": "Cairn case — End the tax tension",
+          "audio": "voice/id:3,0.wav"
+        },
+        {
+          "text": "Rising fuel price to have cascading effect on essential goods, limit purchasing power of consumers: Dow's Fiona Boal",
+          "audio": "voice/id:3,1.wav"
+        },
+        {
+          "text": "Coronavirus News Highlights: Haryana reports 36 new positive cases, 8 deaths in past 24 hours",
+          "audio": "voice/id:3,2.wav"
+        },
+        {
+          "text": "Moneycontrol Pro Weekender | Fire and ice",
+          "audio": "voice/id:3,3.wav"
+        },
+        {
+          "text": "Say no to 9-5: Is 'work your own hours' the next big HR trend?",
+          "audio": "voice/id:3,4.wav"
+        }
       ]
     }
   ]
