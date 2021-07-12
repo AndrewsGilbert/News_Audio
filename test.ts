@@ -35,7 +35,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('58 22 * * *', function () {
+cron.schedule('15 23 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -76,19 +76,20 @@ cron.schedule('58 22 * * *', function () {
               newsObject[index] = detail
             
               fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-              if (i === web.length-1) { audioGeneration() }
+            
             }
         })
     }
 })
 
-function audioGeneration() {
+app.get('/', function (req, res) {
+  
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
   const newsObject: Array<news> = contentJson.newsObject
 
   audioGen()
-    
+  
   function audioGen(webInd: number = 0, newsInd = 0) {
 
     const newsCollection: Array<newsContent> = newsObject[webInd].newsDet
@@ -115,12 +116,14 @@ function audioGeneration() {
           webInd++
           audioGen(webInd, newsInd)
         }
-        console.log(`stdout: ${stdout}`) 
+        console.log(`stdout: ${stdout}`)
       }
     })
   }
-}
+ res.end()
+})
+
   
- app.listen(8588, function () {
+app.listen(8588, function () {
   console.log('Node server is running 8588..')
 })

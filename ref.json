@@ -39,52 +39,27 @@
   ],
   "newsObject": [
     {
-      "webId": 1,
-      "newsDet": [
-        {
-          "text": "Recast loans at non-bank lenders may double by this fiscal-end: Report",
-          "audio": "voice/webId:1-ind:0-MonJul12202122:58:00.wav"
-        },
-        {
-          "text": "IFSCA issues norms for setting up, operating ITFS to provide trade finance",
-          "audio": "voice/webId:1-ind:1-MonJul12202122:58:00.wav"
-        },
-        {
-          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
-          "audio": "voice/webId:1-ind:2-MonJul12202122:58:00.wav"
-        },
-        {
-          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
-          "audio": "voice/webId:1-ind:3-MonJul12202122:58:00.wav"
-        },
-        {
-          "text": "Zeta aims higher with ‘Infinite Scalability’",
-          "audio": "voice/webId:1-ind:4-MonJul12202122:58:00.wav"
-        }
-      ]
-    },
-    {
       "webId": 2,
       "newsDet": [
         {
           "text": "Base effect drives up IIP growth to 29.3% in May",
-          "audio": "voice/webId:2-ind:0-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:2-ind:0-MonJul12202123:15:00.wav"
         },
         {
           "text": "PM calls for post-harvest revolution in farm sector",
-          "audio": "voice/webId:2-ind:1-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:2-ind:1-MonJul12202123:15:00.wav"
         },
         {
           "text": "Retail inflation remains high at 6.26%, IIP soars on account of base effect",
-          "audio": "voice/webId:2-ind:2-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:2-ind:2-MonJul12202123:15:00.wav"
         },
         {
           "text": "Billionaire Gautam Adani sees Indian economy growing to $15 trillion in two decades",
-          "audio": "voice/webId:2-ind:3-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:2-ind:3-MonJul12202123:15:00.wav"
         },
         {
           "text": "Retail inflation in June eases marginally to 6.26% from 6.3% in May",
-          "audio": "voice/webId:2-ind:4-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:2-ind:4-MonJul12202123:15:00.wav"
         }
       ]
     },
@@ -93,23 +68,48 @@
       "newsDet": [
         {
           "text": "Yellen urges EU to back global tax deal, consider more fiscal support",
-          "audio": "voice/webId:3-ind:0-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:3-ind:0-MonJul12202123:15:00.wav"
         },
         {
           "text": "June CPI at 6.26%: Higher inflation adds to MPC’s woes, but growth focus will continue, say economists",
-          "audio": "voice/webId:3-ind:1-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:3-ind:1-MonJul12202123:15:00.wav"
         },
         {
           "text": "More power lines or rooftop solar panels: The fight over energy’s future",
-          "audio": "voice/webId:3-ind:2-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:3-ind:2-MonJul12202123:15:00.wav"
         },
         {
           "text": "Sales and IT functions are outliers in salary hikes, shows TeamLease report",
-          "audio": "voice/webId:3-ind:3-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:3-ind:3-MonJul12202123:15:00.wav"
         },
         {
           "text": "Small, Beautiful & Strong | Tech for Skills",
-          "audio": "voice/webId:3-ind:4-MonJul12202122:58:00.wav"
+          "audio": "voice/webId:3-ind:4-MonJul12202123:15:00.wav"
+        }
+      ]
+    },
+    {
+      "webId": 1,
+      "newsDet": [
+        {
+          "text": "Recast loans at non-bank lenders may double by this fiscal-end: Report",
+          "audio": "voice/webId:1-ind:0-MonJul12202123:15:00.wav"
+        },
+        {
+          "text": "IFSCA issues norms for setting up, operating ITFS to provide trade finance",
+          "audio": "voice/webId:1-ind:1-MonJul12202123:15:00.wav"
+        },
+        {
+          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
+          "audio": "voice/webId:1-ind:2-MonJul12202123:15:00.wav"
+        },
+        {
+          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
+          "audio": "voice/webId:1-ind:3-MonJul12202123:15:00.wav"
+        },
+        {
+          "text": "Zeta aims higher with ‘Infinite Scalability’",
+          "audio": "voice/webId:1-ind:4-MonJul12202123:15:00.wav"
         }
       ]
     }
