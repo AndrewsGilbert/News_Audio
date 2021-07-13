@@ -16,6 +16,7 @@
     "file-system": "*",
     "node-cron": "*",
     "path": "*",
+    "q": "^1.5.1",
     "request": "*",
     "ts-node": "*"
   },
