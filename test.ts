@@ -95,29 +95,42 @@ app.get('/', function (req, res) {
     const newsCollection: Array<newsContent> = newsObject[webInd].newsDet
     const data = newsCollection[newsInd].text
     const fileName = newsCollection[newsInd].audio
-    exec(`./tts --text "${data}" --out_path ${fileName}`, (error, stdout, stderr) => {
 
-      if (error) {
-        console.log(`error: ${error.message}`)
-        return
-      }
-      if (stderr) {
-        console.log(`stderr: ${stderr}`)
-        return
-      }
-      if (stdout) {
+    let myPromise = new Promise((resolve, reject) => {  
 
-        if (newsInd < newsCollection.length - 1) {
-          newsInd++
-          audioGen(webInd, newsInd)
-        }
-        if (newsInd === newsCollection.length - 1 && webInd < newsObject.length - 1) {
-          newsInd = 0
-          webInd++
-          audioGen(webInd, newsInd)
-        }
-        console.log(`stdout: ${stdout}`)
+      if( webInd < newsObject.length && newsInd < newsCollection.length ) { 
+
+        exec(`./tts --text "${data}" --out_path ${fileName}`, (error, stdout, stderr) => {
+
+          if (error) {
+            console.log(`error: ${error.message}`)
+            return
+          }
+          if (stderr) {
+            console.log(`stderr: ${stderr}`)
+            return
+          }
+          if (stdout) {
+            console.log(`stdout: ${stdout}`)
+            resolve('Processing')
+          }
+        })
       }
+    })
+
+    myPromise.then((message) => { 
+      console.log(1)
+      if (newsInd < newsCollection.length - 1) {
+        newsInd++
+        audioGen(webInd, newsInd)
+      } else if ( webInd < newsObject.length-1) {
+        newsInd = 0
+        webInd++
+        audioGen(webInd, newsInd)
+      }else{console.log('All text news are converted to audio')}
+
+    }).catch((message) => { 
+      console.log(message);
     })
   }
  res.end()
