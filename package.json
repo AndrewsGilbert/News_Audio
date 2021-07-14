@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ref": "ts-node test.ts"
+    "test": "ts-node test.ts",
+    "promise": "ts-node promise.ts",
+    "async": "ts-node async.ts"
   },
   "author": "",
   "license": "ISC",
