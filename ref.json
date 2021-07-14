@@ -40,76 +40,94 @@
   "newsObject": [
     {
       "webId": 2,
+      "newsId": 1,
       "newsDet": [
         {
-          "text": "Base effect drives up IIP growth to 29.3% in May",
-          "audio": "voice/webId:2-ind:0-MonJul12202123:15:00.wav"
+          "text": "Monsoon session: Pre-pack insolvency, bank privatisation top agenda",
+          "audio": "voice/NewsId:1-index:0-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "PM calls for post-harvest revolution in farm sector",
-          "audio": "voice/webId:2-ind:1-MonJul12202123:15:00.wav"
+          "text": "S&P retains India’s rating, says recovery to gain pace in H2",
+          "audio": "voice/NewsId:1-index:1-WedJul14202111:28:00.wav",
+          "duration": 5.260045351473923
         },
         {
-          "text": "Retail inflation remains high at 6.26%, IIP soars on account of base effect",
-          "audio": "voice/webId:2-ind:2-MonJul12202123:15:00.wav"
+          "text": "Sowing to improve as monsoon covers whole country",
+          "audio": "voice/NewsId:1-index:2-WedJul14202111:28:00.wav",
+          "duration": 3.6346485260770973
         },
         {
-          "text": "Billionaire Gautam Adani sees Indian economy growing to $15 trillion in two decades",
-          "audio": "voice/webId:2-ind:3-MonJul12202123:15:00.wav"
+          "text": "Bond yields stay firm on lower June inflation print",
+          "audio": "voice/NewsId:1-index:3-WedJul14202111:28:00.wav",
+          "duration": 4.284807256235828
         },
         {
-          "text": "Retail inflation in June eases marginally to 6.26% from 6.3% in May",
-          "audio": "voice/webId:2-ind:4-MonJul12202123:15:00.wav"
-        }
-      ]
-    },
-    {
-      "webId": 3,
-      "newsDet": [
-        {
-          "text": "Yellen urges EU to back global tax deal, consider more fiscal support",
-          "audio": "voice/webId:3-ind:0-MonJul12202123:15:00.wav"
-        },
-        {
-          "text": "June CPI at 6.26%: Higher inflation adds to MPC’s woes, but growth focus will continue, say economists",
-          "audio": "voice/webId:3-ind:1-MonJul12202123:15:00.wav"
-        },
-        {
-          "text": "More power lines or rooftop solar panels: The fight over energy’s future",
-          "audio": "voice/webId:3-ind:2-MonJul12202123:15:00.wav"
-        },
-        {
-          "text": "Sales and IT functions are outliers in salary hikes, shows TeamLease report",
-          "audio": "voice/webId:3-ind:3-MonJul12202123:15:00.wav"
-        },
-        {
-          "text": "Small, Beautiful & Strong | Tech for Skills",
-          "audio": "voice/webId:3-ind:4-MonJul12202123:15:00.wav"
+          "text": "UP’s own tax revenue up 92% y-o-y in Q1",
+          "audio": "voice/NewsId:1-index:4-WedJul14202111:28:00.wav",
+          "duration": 4.656326530612245
         }
       ]
     },
     {
       "webId": 1,
+      "newsId": 2,
       "newsDet": [
         {
-          "text": "Recast loans at non-bank lenders may double by this fiscal-end: Report",
-          "audio": "voice/webId:1-ind:0-MonJul12202123:15:00.wav"
+          "text": "Resolution of 95 IL&FS companies' debt to spill into FY23",
+          "audio": "voice/NewsId:2-index:0-WedJul14202111:28:00.wav",
+          "duration": 5.678004535147393
         },
         {
-          "text": "IFSCA issues norms for setting up, operating ITFS to provide trade finance",
-          "audio": "voice/webId:1-ind:1-MonJul12202123:15:00.wav"
+          "text": "India needs foreign exchange reserves buffer to tackle exchange rate volatility: Raghuram Rajan",
+          "audio": "voice/NewsId:2-index:1-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "Centre's dilemma: Rescue pandemic-hit sectors or boost sectors that beat the virus?",
-          "audio": "voice/webId:1-ind:2-MonJul12202123:15:00.wav"
+          "text": "States borrowing cost continue to rise, yields soar back to 7%",
+          "audio": "voice/NewsId:2-index:2-WedJul14202111:28:00.wav",
+          "duration": 5.689614512471655
         },
         {
-          "text": "Nirmala Sitharaman urges G20 nations for aligning recovery strategies with climate concerns",
-          "audio": "voice/webId:1-ind:3-MonJul12202123:15:00.wav"
+          "text": "GST officers unearth over Rs 35,000 crore fraud in 2020-21, arrest 426 persons",
+          "audio": "voice/NewsId:2-index:3-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "Zeta aims higher with ‘Infinite Scalability’",
-          "audio": "voice/webId:1-ind:4-MonJul12202123:15:00.wav"
+          "text": "Launch of BHIM-UPI in Bhutan to further strengthen bilateral ties: FM Nirmala Sitharaman",
+          "audio": "voice/NewsId:2-index:4-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
+        }
+      ]
+    },
+    {
+      "webId": 3,
+      "newsId": 3,
+      "newsDet": [
+        {
+          "text": "Interview | Bankers not risk-averse, weak demand denting credit growth: SBI chairman",
+          "audio": "voice/NewsId:3-index:0-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "CEA Subramanian hints that govt is unlikely to cut fuel taxes: Report",
+          "audio": "voice/NewsId:3-index:1-WedJul14202111:28:00.wav",
+          "duration": 5.794104308390023
+        },
+        {
+          "text": "Kerala CM Pinarayi Vijayan meets PM Modi; seeks GST compensation dues clearance",
+          "audio": "voice/NewsId:3-index:2-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Chart of the Day | What have global fund managers priced in?",
+          "audio": "voice/NewsId:3-index:3-WedJul14202111:28:00.wav",
+          "duration": 4.6447165532879815
+        },
+        {
+          "text": "China-India trade on rise despite chill in bilateral ties, crosses $57 billion in H1 2021",
+          "audio": "voice/NewsId:3-index:4-WedJul14202111:28:00.wav",
+          "duration": 6.374603174603174
         }
       ]
     }

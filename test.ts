@@ -6,6 +6,8 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import cron from 'node-cron'
 import { exec } from 'child_process'
+const load = require('audio-loader')
+
 const app = express()
 
 app.use(bodyParser.urlencoded({
@@ -21,11 +23,13 @@ type web = {
 
 type newsContent = {
     text:string
-    audio:string
+    audio: string
+    duration:number
 }
 
 type news = {
     webId: number
+    newsId:number
     newsDet: Array<newsContent>
 
 }
@@ -35,7 +39,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('15 23 * * *', function () {
+cron.schedule('28 11 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -48,6 +52,7 @@ cron.schedule('15 23 * * *', function () {
         const id: number = web[i].id
         const url: string = web[i].url
         const selector: Array<string> = web[i].selector
+
         request(url, function (err, resp, html) {
          
             if (!err && resp.statusCode === 200) {
@@ -61,9 +66,11 @@ cron.schedule('15 23 * * *', function () {
                   const dataPath = $(selectorId)
                   const data: any = dataPath.text()
                   
+                  const newsId:number = newsObject.length+1
+
                   let newsDetail = <newsContent>{}
                   newsDetail.text = data
-                  const fileName = 'voice/webId:'+id+'-ind:'+j+'-'+date+'.wav'
+                  const fileName = 'voice/NewsId:'+newsId+'-index:'+j+'-'+date+'.wav'
                   newsDetail.audio = fileName
                   news[j] = newsDetail
                   
@@ -72,33 +79,43 @@ cron.schedule('15 23 * * *', function () {
               const index = newsObject.length
               let detail = <news>{}
               detail.webId = id
+              detail.newsId = index+1
               detail.newsDet = news
               newsObject[index] = detail
             
               fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
+
+              if(i === web.length-1){generate()}
             
             }
         })
     }
+  
 })
 
-app.get('/', function (req, res) {
+function generate() {
+  
+
+  //app.get('/', function (req, res) {
   
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
+  const web: Array<web> = contentJson.web
   const newsObject: Array<news> = contentJson.newsObject
+
+  const index: number = newsObject.length - web.length
 
   audioGen()
   
-  function audioGen(webInd: number = 0, newsInd = 0) {
+  function audioGen(objectInd: number = index, newsInd = 0) {
 
-    const newsCollection: Array<newsContent> = newsObject[webInd].newsDet
+    const newsCollection: Array<newsContent> = newsObject[objectInd].newsDet
     const data = newsCollection[newsInd].text
     const fileName = newsCollection[newsInd].audio
 
-    let myPromise = new Promise((resolve, reject) => {  
+    let myPromise = new Promise((resolve, reject) => {
 
-      if( webInd < newsObject.length && newsInd < newsCollection.length ) { 
+      if (objectInd < newsObject.length && newsInd < newsCollection.length) {
 
         exec(`./tts --text "${data}" --out_path ${fileName}`, (error, stdout, stderr) => {
 
@@ -118,25 +135,54 @@ app.get('/', function (req, res) {
       }
     })
 
-    myPromise.then((message) => { 
-      console.log(1)
-      if (newsInd < newsCollection.length - 1) {
-        newsInd++
-        audioGen(webInd, newsInd)
-      } else if ( webInd < newsObject.length-1) {
-        newsInd = 0
-        webInd++
-        audioGen(webInd, newsInd)
-      }else{console.log('All text news are converted to audio')}
+    myPromise.then((message) => {
+      
+        let myPromise2 = new Promise((resolve, reject) => {
 
-    }).catch((message) => { 
-      console.log(message);
+            if (objectInd < newsObject.length && newsInd < newsCollection.length) {
+
+            load(fileName).then(function (res: { duration: number }) {
+              newsCollection[newsInd].duration = res.duration
+              fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
+              resolve('Processing')
+            })
+          }
+        })
+       
+      myPromise2.then((message) => {
+          
+          if (newsInd < newsCollection.length - 1) {
+            newsInd++
+            audioGen(objectInd, newsInd)
+          } else if (objectInd < newsObject.length - 1) {
+            newsInd = 0
+            objectInd++
+            audioGen(objectInd, newsInd)
+          } else {
+            console.log('All text news are converted to audio')
+          }
+        })
+    }).catch((message) => {
+        console.log(message);
     })
   }
- res.end()
-})
-
+  //res.end()
+  //})
+}
   
 app.listen(8588, function () {
   console.log('Node server is running 8588..')
 })
+
+
+
+/*
+      load(fileName).then(function (res: { duration: number }) {
+
+        newsCollection[newsInd].duration = res.duration
+        fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
+        console.log(1)
+        
+      })
+
+      */
