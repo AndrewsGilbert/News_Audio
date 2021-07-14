@@ -10,13 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "audio-loader": "*",
     "body-parser": "*",
     "cheerio": "*",
     "express": "*",
     "file-system": "*",
     "node-cron": "*",
     "path": "*",
-    "q": "^1.5.1",
+    "q": "*",
     "request": "*",
     "ts-node": "*"
   },
