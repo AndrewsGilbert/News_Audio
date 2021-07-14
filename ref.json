@@ -130,6 +130,99 @@
           "duration": 6.374603174603174
         }
       ]
+    },
+    {
+      "webId": 1,
+      "newsId": 4,
+      "newsDet": [
+        {
+          "text": "Resolution of 95 IL&FS companies' debt to spill into FY23",
+          "audio": "voice/NewsId:4-index:0-WedJul14202118:18:00.wav",
+          "duration": 5.7824943310657595
+        },
+        {
+          "text": "India needs foreign exchange reserves buffer to tackle exchange rate volatility: Raghuram Rajan",
+          "audio": "voice/NewsId:4-index:1-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "States borrowing cost continue to rise, yields soar back to 7%",
+          "audio": "voice/NewsId:4-index:2-WedJul14202118:18:00.wav",
+          "duration": 5.7476643990929706
+        },
+        {
+          "text": "GST officers unearth over Rs 35,000 crore fraud in 2020-21, arrest 426 persons",
+          "audio": "voice/NewsId:4-index:3-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Launch of BHIM-UPI in Bhutan to further strengthen bilateral ties: FM Nirmala Sitharaman",
+          "audio": "voice/NewsId:4-index:4-WedJul14202118:18:00.wav",
+          "duration": 6.270113378684807
+        }
+      ]
+    },
+    {
+      "webId": 2,
+      "newsId": 5,
+      "newsDet": [
+        {
+          "text": "CCEA clears realignment of Department of Animal Husbandry & Dairying schemes",
+          "audio": "voice/NewsId:5-index:0-WedJul14202118:18:00.wav",
+          "duration": 5.469024943310657
+        },
+        {
+          "text": "Decoding the often misunderstood concept of skills and skilling in India",
+          "audio": "voice/NewsId:5-index:1-WedJul14202118:18:00.wav",
+          "duration": 4.969795918367347
+        },
+        {
+          "text": "How fast will economy recover? It depends on businesses reopening, vaccination, Covid-19 third wave",
+          "audio": "voice/NewsId:5-index:2-WedJul14202118:18:00.wav",
+          "duration": 8.964353741496598
+        },
+        {
+          "text": "I-T Department claims Rs 880-crore concealed income detected after survey on Quess Corp",
+          "audio": "voice/NewsId:5-index:3-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "WPI inflation eases to 12.07 pc in June; food, crude prices soften",
+          "audio": "voice/NewsId:5-index:4-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        }
+      ]
+    },
+    {
+      "webId": 3,
+      "newsId": 6,
+      "newsDet": [
+        {
+          "text": "Moneycontrol Pro Panorama | Will it be a rush hour for startup IPOs after Zomato?",
+          "audio": "voice/NewsId:6-index:0-WedJul14202118:18:00.wav",
+          "duration": 6.130793650793651
+        },
+        {
+          "text": "Record 109.33 LMT foodgrains allocated to Uttar Pradesh under PMGKAY",
+          "audio": "voice/NewsId:6-index:1-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Income Tax Returns: 6 benefits of ITR filing even if your income is not taxable",
+          "audio": "voice/NewsId:6-index:2-WedJul14202118:18:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "The quest for the investment Holy Grail — an index of everything",
+          "audio": "voice/NewsId:6-index:3-WedJul14202118:18:00.wav",
+          "duration": 4.83047619047619
+        },
+        {
+          "text": "NEP 2020: Heavy school textbooks may be phased out under new curriculum framework",
+          "audio": "voice/NewsId:6-index:4-WedJul14202118:18:00.wav",
+          "duration": 6.328163265306123
+        }
+      ]
     }
   ]
 }

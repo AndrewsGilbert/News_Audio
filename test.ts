@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import cron from 'node-cron'
 import { exec } from 'child_process'
+//import load from 'audio-loader'
 const load = require('audio-loader')
 
 const app = express()
@@ -39,7 +40,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('28 11 * * *', function () {
+cron.schedule('18 18 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -95,9 +96,6 @@ cron.schedule('28 11 * * *', function () {
 
 function generate() {
   
-
-  //app.get('/', function (req, res) {
-  
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
   const web: Array<web> = contentJson.web
@@ -135,21 +133,12 @@ function generate() {
       }
     })
 
-    myPromise.then((message) => {
+    myPromise.then(() => {
       
-        let myPromise2 = new Promise((resolve, reject) => {
-
-            if (objectInd < newsObject.length && newsInd < newsCollection.length) {
-
-            load(fileName).then(function (res: { duration: number }) {
-              newsCollection[newsInd].duration = res.duration
-              fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-              resolve('Processing')
-            })
-          }
-        })
-       
-      myPromise2.then((message) => {
+      load(fileName).then(function (res: { duration: number }) {
+        newsCollection[newsInd].duration = res.duration
+        fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
+      }).then(() => {
           
           if (newsInd < newsCollection.length - 1) {
             newsInd++
@@ -166,8 +155,6 @@ function generate() {
         console.log(message);
     })
   }
-  //res.end()
-  //})
 }
   
 app.listen(8588, function () {
@@ -176,13 +163,3 @@ app.listen(8588, function () {
 
 
 
-/*
-      load(fileName).then(function (res: { duration: number }) {
-
-        newsCollection[newsInd].duration = res.duration
-        fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-        console.log(1)
-        
-      })
-
-      */
