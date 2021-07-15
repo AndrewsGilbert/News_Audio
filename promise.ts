@@ -7,7 +7,6 @@ import { exec } from 'child_process'
 const word: string = 'Hello all,How are you'
 const fileName: string = 'temp/ref.wav'
 const url:string = 'https://www.goldpricesindia.com/' 
-let data:any
 
 let audio = function(){ 
 let myPromise1 = new Promise((resolve, reject) => {
@@ -33,6 +32,7 @@ let myPromise1 = new Promise((resolve, reject) => {
   }
 
  let scrap = function(){   
+
     let myPromise2 = new Promise((resolve, reject) => {
 
       console.log(3)
@@ -40,9 +40,9 @@ let myPromise1 = new Promise((resolve, reject) => {
             if (!err && resp.statusCode === 200) {
                 const $ = cheerio.load(html)
                 const dataPath = $('.no-js')
-                data = dataPath.html()
+                const data:any = dataPath.html()
                 console.log(4)
-                resolve('Processing myPromise2')
+                resolve(data)
 
             }
           })
@@ -50,27 +50,30 @@ let myPromise1 = new Promise((resolve, reject) => {
     return myPromise2
   }
 
-let write = function(){ 
+let write = function(data:any){ 
+
+  
     let myPromise3 = new Promise((resolve, reject) => {
 
       console.log(5)
-      fs.writeFile('ref.txt', data, function (err) {
+      const fileName:string = 'ref.txt'
+      fs.writeFile(fileName, data, function (err) {
         if (err) throw err
         console.log(6)
-        resolve('Processing myPromise3')
+        resolve(fileName)
       })
 
     })
     return myPromise3
   }
 
-let read = function(){     
+let read = function(fileName:any|string){     
     let myPromise4 = new Promise((resolve, reject) => {
 
       console.log(7)
-      fs.readFile('ref.txt', 'utf8', function(err, data) {
+      fs.readFile(fileName, 'utf8', function(err, data) {
         if(!err) {
-        console.log(8)}
+        console.log(data)}
         resolve('Processing myPromise4')
       }) 
 
