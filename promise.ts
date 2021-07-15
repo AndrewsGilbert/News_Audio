@@ -7,13 +7,11 @@ import { exec } from 'child_process'
 const word: string = 'Hello all,How are you'
 const fileName: string = 'temp/ref.wav'
 const url:string = 'https://www.goldpricesindia.com/' 
+let data:any
 
-test()
-
-function test() {
-    console.log(1)
-    let myPromise1 = new Promise((resolve, reject) => {
-        console.log(2)
+let audio = function(){ 
+let myPromise1 = new Promise((resolve, reject) => {
+        console.log(1)
       exec(`./tts --text "${word}" --out_path ${fileName}`, (error, stdout, stderr) => {
 
           if (error) {
@@ -26,42 +24,60 @@ function test() {
           }
           if (stdout) {
             console.log(`stdout: ${stdout}`)
-            console.log(3)
+            console.log(2)
             resolve('Processing myPromise1')
           }
         })
     })
+    return myPromise1
+  }
 
-  myPromise1.then(() => {
-    console.log(4)
-      let data:any
+ let scrap = function(){   
     let myPromise2 = new Promise((resolve, reject) => {
 
-      console.log(5)
+      console.log(3)
           request(url, function (err, resp, html) {
             if (!err && resp.statusCode === 200) {
                 const $ = cheerio.load(html)
                 const dataPath = $('.no-js')
-              data = dataPath.html()
-              console.log(6)
-              resolve('Processing myPromise2')
+                data = dataPath.html()
+                console.log(4)
+                resolve('Processing myPromise2')
 
             }
           })
     })
-    
-    myPromise2.then(() => {
-      console.log(7)
-      fs.writeFileSync('ref.txt', data, 'utf8')
-    }).then(() => {
-      const content: string = fs.readFileSync('ref.txt', 'utf8')
-      console.log(8)
-      console.log(content)
-    })
-    })
-}
+    return myPromise2
+  }
 
-/*
-                fs.writeFileSync('ref.txt',data, 'utf8')
-                const content: string = fs.readFileSync('ref.txt', 'utf8')
-                console.log(content) */
+let write = function(){ 
+    let myPromise3 = new Promise((resolve, reject) => {
+
+      console.log(5)
+      fs.writeFile('ref.txt', data, function (err) {
+        if (err) throw err
+        console.log(6)
+        resolve('Processing myPromise3')
+      })
+
+    })
+    return myPromise3
+  }
+
+let read = function(){     
+    let myPromise4 = new Promise((resolve, reject) => {
+
+      console.log(7)
+      fs.readFile('ref.txt', 'utf8', function(err, data) {
+        if(!err) {
+        console.log(8)}
+        resolve('Processing myPromise4')
+      }) 
+
+    })
+    return myPromise4
+  }
+
+audio().then(scrap).then(write).then(read)
+
+
