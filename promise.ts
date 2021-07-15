@@ -53,7 +53,7 @@ let myPromise1 = new Promise((resolve, reject) => {
 let write = function(data:any){ 
 
   
-    let myPromise3 = new Promise((resolve, reject) => {
+    let myPromise3 = new Promise<string>((resolve, reject) => {
 
       console.log(5)
       const fileName:string = 'ref.txt'
@@ -67,7 +67,7 @@ let write = function(data:any){
     return myPromise3
   }
 
-let read = function(fileName:any|string){     
+let read = function(fileName:string){     
     let myPromise4 = new Promise((resolve, reject) => {
 
       console.log(7)
