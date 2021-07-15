@@ -223,6 +223,99 @@
           "duration": 6.328163265306123
         }
       ]
+    },
+    {
+      "webId": 2,
+      "newsId": 7,
+      "newsDet": [
+        {
+          "text": "Dawn of new era in International tax Policy",
+          "audio": "voice/NewsId:7-index:0-ThuJul15202121:29:00.wav",
+          "duration": 3.773968253968254
+        },
+        {
+          "text": "Centre borrows, releases Rs 75,000 crore to compensate states for GST revenue shortfall",
+          "audio": "voice/NewsId:7-index:1-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Exports up 48.34 pc to USD 32.5 bn; trade deficit at USD 9.37 bn in June",
+          "audio": "voice/NewsId:7-index:2-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Tapering 2nd wave brightens eco prospects but demand may take time to return: RBI",
+          "audio": "voice/NewsId:7-index:3-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Pursuing course of cautious optimism amid COVID-19: CBDT chairman",
+          "audio": "voice/NewsId:7-index:4-ThuJul15202121:29:00.wav",
+          "duration": 6.003083900226757
+        }
+      ]
+    },
+    {
+      "webId": 1,
+      "newsId": 8,
+      "newsDet": [
+        {
+          "text": "Finance ministry releases Rs 75,000 crore to states and UTs, nearly half of FY22 GST compensation shortfall",
+          "audio": "voice/NewsId:8-index:0-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "External benchmark system improves monetary transmission: RBI Article",
+          "audio": "voice/NewsId:8-index:1-ThuJul15202121:29:00.wav",
+          "duration": 5.492244897959184
+        },
+        {
+          "text": "Govt issues RFP for book runners, legal advisor for LIC IPO",
+          "audio": "voice/NewsId:8-index:2-ThuJul15202121:29:00.wav",
+          "duration": 5.109115646258504
+        },
+        {
+          "text": "Centre releases Rs 75,000 crore to states as GST compensation",
+          "audio": "voice/NewsId:8-index:3-ThuJul15202121:29:00.wav",
+          "duration": 5.689614512471655
+        },
+        {
+          "text": "Consumers expects fall in income, savings due to high fuel, commodity prices: Survey",
+          "audio": "voice/NewsId:8-index:4-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        }
+      ]
+    },
+    {
+      "webId": 3,
+      "newsId": 9,
+      "newsDet": [
+        {
+          "text": "How Europe’s ambitious new climate agenda will affect businesses",
+          "audio": "voice/NewsId:9-index:0-ThuJul15202121:29:00.wav",
+          "duration": 4.633106575963719
+        },
+        {
+          "text": "China’s growth slows as pandemic fears persist",
+          "audio": "voice/NewsId:9-index:1-ThuJul15202121:29:00.wav",
+          "duration": 3.715918367346939
+        },
+        {
+          "text": "RBI announces second purchase of G-SAP 2.0 on July 22 for Rs 20,000 crore",
+          "audio": "voice/NewsId:9-index:2-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "US unemployment claims fall to 360,000, a new pandemic low",
+          "audio": "voice/NewsId:9-index:3-ThuJul15202121:29:00.wav",
+          "duration": 6.037913832199546
+        },
+        {
+          "text": "Stakeholders should be capable to address risks of mis-selling and cyber security, says RBI governor",
+          "audio": "voice/NewsId:9-index:4-ThuJul15202121:29:00.wav",
+          "duration": 6.374603174603174
+        }
+      ]
     }
   ]
 }
