@@ -10,12 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "audio-loader": "*",
+    "audioconcat": "*",
     "body-parser": "*",
     "cheerio": "*",
     "express": "*",
     "file-system": "*",
     "node-cron": "*",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "*",
     "path": "*",
     "q": "*",
     "request": "*",
@@ -24,7 +25,7 @@
   "devDependencies": {
     "@types/express": "*",
     "@types/node-cron": "*",
-    "@types/node-fetch": "^2.5.11",
+    "@types/node-fetch": "*",
     "@types/request": "*"
   }
 }
