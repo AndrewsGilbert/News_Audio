@@ -316,6 +316,99 @@
           "duration": 6.374603174603174
         }
       ]
+    },
+    {
+      "webId": 2,
+      "newsId": 10,
+      "newsDet": [
+        {
+          "text": "Think tank recommends India set up new trade negotiating body",
+          "audio": "voice/NewsId:10-index:0-FriJul16202111:59:00.wav",
+          "duration": 4.621496598639456
+        },
+        {
+          "text": "Centre front-loads GST aid; Rs 75,000 crore released to states",
+          "audio": "voice/NewsId:10-index:1-FriJul16202111:59:00.wav",
+          "duration": 6.223673469387755
+        },
+        {
+          "text": "Exports jump 48% in June, imports surge 98%",
+          "audio": "voice/NewsId:10-index:2-FriJul16202111:59:00.wav",
+          "duration": 5.376145124716554
+        },
+        {
+          "text": "Lavish fishery sops by advanced nations unjust: Union minister Piyush Goyal",
+          "audio": "voice/NewsId:10-index:3-FriJul16202111:59:00.wav",
+          "duration": 6.281723356009071
+        },
+        {
+          "text": "Dawn of new era in International tax Policy",
+          "audio": "voice/NewsId:10-index:4-FriJul16202111:59:00.wav",
+          "duration": 3.820408163265306
+        }
+      ]
+    },
+    {
+      "webId": 1,
+      "newsId": 11,
+      "newsDet": [
+        {
+          "text": "Covid impact: Consumers uncertain, see income drop, erosion in savings",
+          "audio": "voice/NewsId:11-index:0-FriJul16202111:59:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Pandemic helped drive the goals of financial inclusion: Debasish Panda",
+          "audio": "voice/NewsId:11-index:1-FriJul16202111:59:00.wav",
+          "duration": 5.805714285714286
+        },
+        {
+          "text": "GST compensation: Centre releases Rs 75,000 crore to states, UTs",
+          "audio": "voice/NewsId:11-index:2-FriJul16202111:59:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Finance ministry releases Rs 75,000 crore to states and UTs, nearly half of FY22 GST compensation shortfall",
+          "audio": "voice/NewsId:11-index:3-FriJul16202111:59:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "External benchmark system improves monetary transmission: RBI Article",
+          "audio": "voice/NewsId:11-index:4-FriJul16202111:59:00.wav",
+          "duration": 5.492244897959184
+        }
+      ]
+    },
+    {
+      "webId": 3,
+      "newsId": 12,
+      "newsDet": [
+        {
+          "text": "Confidence in global reflation trade dented, says RBI report",
+          "audio": "voice/NewsId:12-index:0-FriJul16202111:59:00.wav",
+          "duration": 5.2136054421768705
+        },
+        {
+          "text": "How Europe’s ambitious new climate agenda will affect businesses",
+          "audio": "voice/NewsId:12-index:1-FriJul16202111:59:00.wav",
+          "duration": 4.551836734693878
+        },
+        {
+          "text": "China’s growth slows as pandemic fears persist",
+          "audio": "voice/NewsId:12-index:2-FriJul16202111:59:00.wav",
+          "duration": 3.773968253968254
+        },
+        {
+          "text": "RBI announces second purchase of G-SAP 2.0 on July 22 for Rs 20,000 crore",
+          "audio": "voice/NewsId:12-index:3-FriJul16202111:59:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "US unemployment claims fall to 360,000, a new pandemic low",
+          "audio": "voice/NewsId:12-index:4-FriJul16202111:59:00.wav",
+          "duration": 6.095963718820862
+        }
+      ]
     }
   ]
 }

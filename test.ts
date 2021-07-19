@@ -91,7 +91,6 @@ cron.schedule('29 21 * * *', function () {
             }
         })
     }
-  
 })
 
 function generate() {
@@ -184,12 +183,9 @@ function generate() {
             console.log(7,3)
             console.log('All text news are converted to audio')
         }
-       
- 
   }
 
   audioGen().then(audioDuration).then(write).then(recur)
-
 
 }
   
