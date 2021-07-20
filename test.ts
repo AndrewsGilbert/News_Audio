@@ -6,7 +6,6 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import cron from 'node-cron'
 import { exec } from 'child_process'
-//import load from 'audio-loader'
 const load = require('audio-loader')
 
 const app = express()
@@ -32,6 +31,7 @@ type news = {
     webId: number
     newsId:number
     newsDet: Array<newsContent>
+    oneaudio:string
 
 }
 
@@ -40,7 +40,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('29 21 * * *', function () {
+cron.schedule('32 16 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -48,6 +48,7 @@ cron.schedule('29 21 * * *', function () {
     const newsObject: Array<news> = contentJson.newsObject
     const date:string = new Date().toString().replace(/[{(+)}]|GMT|0530|India Standard Time| /g, '')
 
+    
     for (let i: number = 0; i < web.length; i++) {
 
         const id: number = web[i].id
@@ -82,6 +83,7 @@ cron.schedule('29 21 * * *', function () {
               detail.webId = id
               detail.newsId = index+1
               detail.newsDet = news
+              detail.oneaudio = `new/NewsId:${index+1}-${date}.wav`
               newsObject[index] = detail
             
               fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
@@ -165,7 +167,7 @@ function generate() {
     return myPromise
   }
 
-  let recur = function () {
+  let recur1 = function () {
     console.log(6)
 
     const newsCollection: Array<newsContent> = newsObject[objectInd].newsDet
@@ -173,22 +175,75 @@ function generate() {
         if (newsInd < newsCollection.length - 1) {
             console.log(7,1)
             newsInd++
-            audioGen().then(audioDuration).then(write).then(recur)
-        } else if (objectInd < newsObject.length - 1) {
+            audioGen().then(audioDuration).then(write).then(recur1)
+        } else if (objectInd < newsObject.length ) {
             console.log(7,2)
-            newsInd = 0
-            objectInd++
-            audioGen().then(audioDuration).then(write).then(recur)
-        } else {
-            console.log(7,3)
-            console.log('All text news are converted to audio')
+            mergeAudiopath().then(mergeAudio).then(recur2)
+
         }
   }
 
-  audioGen().then(audioDuration).then(write).then(recur)
+  audioGen().then(audioDuration).then(write).then(recur1)
+
+  const mergeAudiopath = function ():Promise<string>{
+
+    const myPromise1 = new Promise<string>((resolve, reject) => {
+        const newsCollection:Array<newsContent> = newsObject[objectInd].newsDet
+        const newsId:number = newsObject[objectInd].newsId
+        const fileName:string = newsObject[objectInd].oneaudio
+        const third:number = newsCollection.length
+        let first = ''
+        let second = ''
+        console.log(1)
+        for (let j = 0; j < third; j++) {
+          first += ' -i ' + newsCollection[j].audio
+          second += '[' + j + ':0]'
+        }
+        const final:string = `ffmpeg${first} \\-filter_complex '${second}concat=n=${third}:v=0:a=1[out]' \\-map '[out]' ${fileName}`
+        console.log(2)
+        resolve(final)
+      })
+      return myPromise1
+  } 
+  
+  const mergeAudio = function (final:string):Promise<string> {
+  
+    const myPromise1 = new Promise<string>((resolve, reject) => {
+        console.log(3)
+    exec(`${final}`, (error, stderr, stdout) => {
+      if (error) {
+        console.log(`error: ${error.message}`)
+        return
+      }
+      if (stderr) {
+        console.log(`stderr: ${stderr}`)
+        return
+      }
+      if (stdout) {
+        console.log(`stdout: ${stdout}`)
+        console.log(4)
+        resolve('Done')
+      }
+    })
+    })
+    return myPromise1
+  }
+  
+  const recur2 = function(){
+      console.log(5)
+      if(objectInd <newsObject.length-1){
+          console.log(6)
+            newsInd = 0
+            objectInd++
+            audioGen().then(audioDuration).then(write).then(recur1)
+      }
+      else{console.log('All audio generated')}
+  }
 
 }
   
+
+
 app.listen(8588, function () {
   console.log('Node server is running 8588..')
 })

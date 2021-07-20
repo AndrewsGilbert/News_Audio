@@ -43,372 +43,96 @@
       "newsId": 1,
       "newsDet": [
         {
-          "text": "Monsoon session: Pre-pack insolvency, bank privatisation top agenda",
-          "audio": "voice/NewsId:1-index:0-WedJul14202111:28:00.wav",
+          "text": "India’s macroeconomic fundamentals strong; recovery underway: Deepak Parekh",
+          "audio": "voice/NewsId:1-index:0-TueJul20202116:32:00.wav",
+          "duration": 6.293333333333333
+        },
+        {
+          "text": "ADB lowers India’s economic growth forecast for this fiscal to 10 pc",
+          "audio": "voice/NewsId:1-index:1-TueJul20202116:32:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "S&P retains India’s rating, says recovery to gain pace in H2",
-          "audio": "voice/NewsId:1-index:1-WedJul14202111:28:00.wav",
-          "duration": 5.260045351473923
+          "text": "Over USD 157 billion deployed in last 15 months to fight Covid pandemic: World Bank",
+          "audio": "voice/NewsId:1-index:2-TueJul20202116:32:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "Sowing to improve as monsoon covers whole country",
-          "audio": "voice/NewsId:1-index:2-WedJul14202111:28:00.wav",
-          "duration": 3.6346485260770973
+          "text": "FY21 compensation: ‘GST transfers to states for FY21 fell short by Rs 81,179 crore’",
+          "audio": "voice/NewsId:1-index:3-TueJul20202116:32:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "Bond yields stay firm on lower June inflation print",
-          "audio": "voice/NewsId:1-index:3-WedJul14202111:28:00.wav",
-          "duration": 4.284807256235828
-        },
-        {
-          "text": "UP’s own tax revenue up 92% y-o-y in Q1",
-          "audio": "voice/NewsId:1-index:4-WedJul14202111:28:00.wav",
-          "duration": 4.656326530612245
+          "text": "Bond yields fall as crude oil prices ease",
+          "audio": "voice/NewsId:1-index:4-TueJul20202116:32:00.wav",
+          "duration": 3.820408163265306
         }
-      ]
+      ],
+      "oneaudio": "new/NewsId:1-TueJul20202116:32:00.wav"
     },
     {
       "webId": 1,
       "newsId": 2,
       "newsDet": [
         {
-          "text": "Resolution of 95 IL&FS companies' debt to spill into FY23",
-          "audio": "voice/NewsId:2-index:0-WedJul14202111:28:00.wav",
-          "duration": 5.678004535147393
-        },
-        {
-          "text": "India needs foreign exchange reserves buffer to tackle exchange rate volatility: Raghuram Rajan",
-          "audio": "voice/NewsId:2-index:1-WedJul14202111:28:00.wav",
+          "text": "Finance Ministry seeks Parliament nod for net additional Rs 23,675 crore spending",
+          "audio": "voice/NewsId:2-index:0-TueJul20202116:32:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "States borrowing cost continue to rise, yields soar back to 7%",
-          "audio": "voice/NewsId:2-index:2-WedJul14202111:28:00.wav",
-          "duration": 5.689614512471655
+          "text": "RBI's Mastercard ban likely to create monopoly in India's credit card market",
+          "audio": "voice/NewsId:2-index:1-TueJul20202116:32:00.wav",
+          "duration": 5.736054421768707
         },
         {
-          "text": "GST officers unearth over Rs 35,000 crore fraud in 2020-21, arrest 426 persons",
-          "audio": "voice/NewsId:2-index:3-WedJul14202111:28:00.wav",
+          "text": "Government collects Rs 1.01 lakh crore from excise, Rs 2.41 lakh crore from income tax in Q1",
+          "audio": "voice/NewsId:2-index:2-TueJul20202116:32:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Launch of BHIM-UPI in Bhutan to further strengthen bilateral ties: FM Nirmala Sitharaman",
-          "audio": "voice/NewsId:2-index:4-WedJul14202111:28:00.wav",
+          "text": "Rs 81,179 crore due to states as GST compensation for FY21",
+          "audio": "voice/NewsId:2-index:3-TueJul20202116:32:00.wav",
+          "duration": 6.374603174603174
+        },
+        {
+          "text": "Govt's excise collections on petrol, diesel jump 88% to Rs 3.35 lakh crore",
+          "audio": "voice/NewsId:2-index:4-TueJul20202116:32:00.wav",
           "duration": 6.374603174603174
         }
-      ]
+      ],
+      "oneaudio": "new/NewsId:2-TueJul20202116:32:00.wav"
     },
     {
       "webId": 3,
       "newsId": 3,
       "newsDet": [
         {
-          "text": "Interview | Bankers not risk-averse, weak demand denting credit growth: SBI chairman",
-          "audio": "voice/NewsId:3-index:0-WedJul14202111:28:00.wav",
-          "duration": 6.374603174603174
+          "text": "Moneycontrol Pro Panorama | The COVID-19 shadow is getting longer",
+          "audio": "voice/NewsId:3-index:0-TueJul20202116:32:00.wav",
+          "duration": 5.666394557823129
         },
         {
-          "text": "CEA Subramanian hints that govt is unlikely to cut fuel taxes: Report",
-          "audio": "voice/NewsId:3-index:1-WedJul14202111:28:00.wav",
-          "duration": 5.794104308390023
-        },
-        {
-          "text": "Kerala CM Pinarayi Vijayan meets PM Modi; seeks GST compensation dues clearance",
-          "audio": "voice/NewsId:3-index:2-WedJul14202111:28:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Chart of the Day | What have global fund managers priced in?",
-          "audio": "voice/NewsId:3-index:3-WedJul14202111:28:00.wav",
-          "duration": 4.6447165532879815
-        },
-        {
-          "text": "China-India trade on rise despite chill in bilateral ties, crosses $57 billion in H1 2021",
-          "audio": "voice/NewsId:3-index:4-WedJul14202111:28:00.wav",
-          "duration": 6.374603174603174
-        }
-      ]
-    },
-    {
-      "webId": 1,
-      "newsId": 4,
-      "newsDet": [
-        {
-          "text": "Resolution of 95 IL&FS companies' debt to spill into FY23",
-          "audio": "voice/NewsId:4-index:0-WedJul14202118:18:00.wav",
-          "duration": 5.7824943310657595
-        },
-        {
-          "text": "India needs foreign exchange reserves buffer to tackle exchange rate volatility: Raghuram Rajan",
-          "audio": "voice/NewsId:4-index:1-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "States borrowing cost continue to rise, yields soar back to 7%",
-          "audio": "voice/NewsId:4-index:2-WedJul14202118:18:00.wav",
-          "duration": 5.7476643990929706
-        },
-        {
-          "text": "GST officers unearth over Rs 35,000 crore fraud in 2020-21, arrest 426 persons",
-          "audio": "voice/NewsId:4-index:3-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Launch of BHIM-UPI in Bhutan to further strengthen bilateral ties: FM Nirmala Sitharaman",
-          "audio": "voice/NewsId:4-index:4-WedJul14202118:18:00.wav",
-          "duration": 6.270113378684807
-        }
-      ]
-    },
-    {
-      "webId": 2,
-      "newsId": 5,
-      "newsDet": [
-        {
-          "text": "CCEA clears realignment of Department of Animal Husbandry & Dairying schemes",
-          "audio": "voice/NewsId:5-index:0-WedJul14202118:18:00.wav",
-          "duration": 5.469024943310657
-        },
-        {
-          "text": "Decoding the often misunderstood concept of skills and skilling in India",
-          "audio": "voice/NewsId:5-index:1-WedJul14202118:18:00.wav",
-          "duration": 4.969795918367347
-        },
-        {
-          "text": "How fast will economy recover? It depends on businesses reopening, vaccination, Covid-19 third wave",
-          "audio": "voice/NewsId:5-index:2-WedJul14202118:18:00.wav",
-          "duration": 8.964353741496598
-        },
-        {
-          "text": "I-T Department claims Rs 880-crore concealed income detected after survey on Quess Corp",
-          "audio": "voice/NewsId:5-index:3-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "WPI inflation eases to 12.07 pc in June; food, crude prices soften",
-          "audio": "voice/NewsId:5-index:4-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        }
-      ]
-    },
-    {
-      "webId": 3,
-      "newsId": 6,
-      "newsDet": [
-        {
-          "text": "Moneycontrol Pro Panorama | Will it be a rush hour for startup IPOs after Zomato?",
-          "audio": "voice/NewsId:6-index:0-WedJul14202118:18:00.wav",
-          "duration": 6.130793650793651
-        },
-        {
-          "text": "Record 109.33 LMT foodgrains allocated to Uttar Pradesh under PMGKAY",
-          "audio": "voice/NewsId:6-index:1-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Income Tax Returns: 6 benefits of ITR filing even if your income is not taxable",
-          "audio": "voice/NewsId:6-index:2-WedJul14202118:18:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "The quest for the investment Holy Grail — an index of everything",
-          "audio": "voice/NewsId:6-index:3-WedJul14202118:18:00.wav",
-          "duration": 4.83047619047619
-        },
-        {
-          "text": "NEP 2020: Heavy school textbooks may be phased out under new curriculum framework",
-          "audio": "voice/NewsId:6-index:4-WedJul14202118:18:00.wav",
-          "duration": 6.328163265306123
-        }
-      ]
-    },
-    {
-      "webId": 2,
-      "newsId": 7,
-      "newsDet": [
-        {
-          "text": "Dawn of new era in International tax Policy",
-          "audio": "voice/NewsId:7-index:0-ThuJul15202121:29:00.wav",
-          "duration": 3.773968253968254
-        },
-        {
-          "text": "Centre borrows, releases Rs 75,000 crore to compensate states for GST revenue shortfall",
-          "audio": "voice/NewsId:7-index:1-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Exports up 48.34 pc to USD 32.5 bn; trade deficit at USD 9.37 bn in June",
-          "audio": "voice/NewsId:7-index:2-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Tapering 2nd wave brightens eco prospects but demand may take time to return: RBI",
-          "audio": "voice/NewsId:7-index:3-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Pursuing course of cautious optimism amid COVID-19: CBDT chairman",
-          "audio": "voice/NewsId:7-index:4-ThuJul15202121:29:00.wav",
-          "duration": 6.003083900226757
-        }
-      ]
-    },
-    {
-      "webId": 1,
-      "newsId": 8,
-      "newsDet": [
-        {
-          "text": "Finance ministry releases Rs 75,000 crore to states and UTs, nearly half of FY22 GST compensation shortfall",
-          "audio": "voice/NewsId:8-index:0-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "External benchmark system improves monetary transmission: RBI Article",
-          "audio": "voice/NewsId:8-index:1-ThuJul15202121:29:00.wav",
-          "duration": 5.492244897959184
-        },
-        {
-          "text": "Govt issues RFP for book runners, legal advisor for LIC IPO",
-          "audio": "voice/NewsId:8-index:2-ThuJul15202121:29:00.wav",
-          "duration": 5.109115646258504
-        },
-        {
-          "text": "Centre releases Rs 75,000 crore to states as GST compensation",
-          "audio": "voice/NewsId:8-index:3-ThuJul15202121:29:00.wav",
-          "duration": 5.689614512471655
-        },
-        {
-          "text": "Consumers expects fall in income, savings due to high fuel, commodity prices: Survey",
-          "audio": "voice/NewsId:8-index:4-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        }
-      ]
-    },
-    {
-      "webId": 3,
-      "newsId": 9,
-      "newsDet": [
-        {
-          "text": "How Europe’s ambitious new climate agenda will affect businesses",
-          "audio": "voice/NewsId:9-index:0-ThuJul15202121:29:00.wav",
-          "duration": 4.633106575963719
-        },
-        {
-          "text": "China’s growth slows as pandemic fears persist",
-          "audio": "voice/NewsId:9-index:1-ThuJul15202121:29:00.wav",
-          "duration": 3.715918367346939
-        },
-        {
-          "text": "RBI announces second purchase of G-SAP 2.0 on July 22 for Rs 20,000 crore",
-          "audio": "voice/NewsId:9-index:2-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "US unemployment claims fall to 360,000, a new pandemic low",
-          "audio": "voice/NewsId:9-index:3-ThuJul15202121:29:00.wav",
-          "duration": 6.037913832199546
-        },
-        {
-          "text": "Stakeholders should be capable to address risks of mis-selling and cyber security, says RBI governor",
-          "audio": "voice/NewsId:9-index:4-ThuJul15202121:29:00.wav",
-          "duration": 6.374603174603174
-        }
-      ]
-    },
-    {
-      "webId": 2,
-      "newsId": 10,
-      "newsDet": [
-        {
-          "text": "Think tank recommends India set up new trade negotiating body",
-          "audio": "voice/NewsId:10-index:0-FriJul16202111:59:00.wav",
-          "duration": 4.621496598639456
-        },
-        {
-          "text": "Centre front-loads GST aid; Rs 75,000 crore released to states",
-          "audio": "voice/NewsId:10-index:1-FriJul16202111:59:00.wav",
-          "duration": 6.223673469387755
-        },
-        {
-          "text": "Exports jump 48% in June, imports surge 98%",
-          "audio": "voice/NewsId:10-index:2-FriJul16202111:59:00.wav",
-          "duration": 5.376145124716554
-        },
-        {
-          "text": "Lavish fishery sops by advanced nations unjust: Union minister Piyush Goyal",
-          "audio": "voice/NewsId:10-index:3-FriJul16202111:59:00.wav",
+          "text": "India's macroeconomic fundamentals strong; recovery underway: Deepak Parekh",
+          "audio": "voice/NewsId:3-index:1-TueJul20202116:32:00.wav",
           "duration": 6.281723356009071
         },
         {
-          "text": "Dawn of new era in International tax Policy",
-          "audio": "voice/NewsId:10-index:4-FriJul16202111:59:00.wav",
-          "duration": 3.820408163265306
+          "text": "Rising dollar stokes nerves for emerging market investors",
+          "audio": "voice/NewsId:3-index:2-TueJul20202116:32:00.wav",
+          "duration": 4.377687074829932
+        },
+        {
+          "text": "Odisha govt approves Rs 95 crore for school infrastructure development",
+          "audio": "voice/NewsId:3-index:3-TueJul20202116:32:00.wav",
+          "duration": 5.573514739229025
+        },
+        {
+          "text": "ADB lowers India's economic growth forecast for this fiscal to 10%",
+          "audio": "voice/NewsId:3-index:4-TueJul20202116:32:00.wav",
+          "duration": 4.9117460317460315
         }
-      ]
-    },
-    {
-      "webId": 1,
-      "newsId": 11,
-      "newsDet": [
-        {
-          "text": "Covid impact: Consumers uncertain, see income drop, erosion in savings",
-          "audio": "voice/NewsId:11-index:0-FriJul16202111:59:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Pandemic helped drive the goals of financial inclusion: Debasish Panda",
-          "audio": "voice/NewsId:11-index:1-FriJul16202111:59:00.wav",
-          "duration": 5.805714285714286
-        },
-        {
-          "text": "GST compensation: Centre releases Rs 75,000 crore to states, UTs",
-          "audio": "voice/NewsId:11-index:2-FriJul16202111:59:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Finance ministry releases Rs 75,000 crore to states and UTs, nearly half of FY22 GST compensation shortfall",
-          "audio": "voice/NewsId:11-index:3-FriJul16202111:59:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "External benchmark system improves monetary transmission: RBI Article",
-          "audio": "voice/NewsId:11-index:4-FriJul16202111:59:00.wav",
-          "duration": 5.492244897959184
-        }
-      ]
-    },
-    {
-      "webId": 3,
-      "newsId": 12,
-      "newsDet": [
-        {
-          "text": "Confidence in global reflation trade dented, says RBI report",
-          "audio": "voice/NewsId:12-index:0-FriJul16202111:59:00.wav",
-          "duration": 5.2136054421768705
-        },
-        {
-          "text": "How Europe’s ambitious new climate agenda will affect businesses",
-          "audio": "voice/NewsId:12-index:1-FriJul16202111:59:00.wav",
-          "duration": 4.551836734693878
-        },
-        {
-          "text": "China’s growth slows as pandemic fears persist",
-          "audio": "voice/NewsId:12-index:2-FriJul16202111:59:00.wav",
-          "duration": 3.773968253968254
-        },
-        {
-          "text": "RBI announces second purchase of G-SAP 2.0 on July 22 for Rs 20,000 crore",
-          "audio": "voice/NewsId:12-index:3-FriJul16202111:59:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "US unemployment claims fall to 360,000, a new pandemic low",
-          "audio": "voice/NewsId:12-index:4-FriJul16202111:59:00.wav",
-          "duration": 6.095963718820862
-        }
-      ]
+      ],
+      "oneaudio": "new/NewsId:3-TueJul20202116:32:00.wav"
     }
   ]
 }
