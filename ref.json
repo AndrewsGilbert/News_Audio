@@ -39,100 +39,100 @@
   ],
   "newsObject": [
     {
-      "webId": 2,
+      "webId": 1,
       "newsId": 1,
       "newsDet": [
         {
-          "text": "India’s macroeconomic fundamentals strong; recovery underway: Deepak Parekh",
-          "audio": "voice/NewsId:1-index:0-TueJul20202116:32:00.wav",
-          "duration": 6.293333333333333
+          "text": "‘Mastercard’s dual record maintenance led to RBI ban’",
+          "audio": "voice/NewsId:1-index:0-ThuJul22202111:54:00.wav",
+          "duration": 3.9132879818594106
         },
         {
-          "text": "ADB lowers India’s economic growth forecast for this fiscal to 10 pc",
-          "audio": "voice/NewsId:1-index:1-TueJul20202116:32:00.wav",
+          "text": "FDI investment doubled in April-May, but secondary investments dominate inflows: RBI data",
+          "audio": "voice/NewsId:1-index:1-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Over USD 157 billion deployed in last 15 months to fight Covid pandemic: World Bank",
-          "audio": "voice/NewsId:1-index:2-TueJul20202116:32:00.wav",
+          "text": "Excise duty rates on petrol, diesel calibrated to generate resources for infrastructure development: FinMin",
+          "audio": "voice/NewsId:1-index:2-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "FY21 compensation: ‘GST transfers to states for FY21 fell short by Rs 81,179 crore’",
-          "audio": "voice/NewsId:1-index:3-TueJul20202116:32:00.wav",
+          "text": "Govt seeks Parliament nod for Rs 1.87 lakh crore supplementary demands for this fiscal",
+          "audio": "voice/NewsId:1-index:3-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Bond yields fall as crude oil prices ease",
-          "audio": "voice/NewsId:1-index:4-TueJul20202116:32:00.wav",
-          "duration": 3.820408163265306
+          "text": "E-way bill generation sees a sharp increase in July hinting at recovery",
+          "audio": "voice/NewsId:1-index:4-ThuJul22202111:54:00.wav",
+          "duration": 5.155555555555556
         }
       ],
-      "oneaudio": "new/NewsId:1-TueJul20202116:32:00.wav"
+      "oneaudio": "video/NewsId:1.mp4"
     },
     {
-      "webId": 1,
+      "webId": 2,
       "newsId": 2,
       "newsDet": [
         {
-          "text": "Finance Ministry seeks Parliament nod for net additional Rs 23,675 crore spending",
-          "audio": "voice/NewsId:2-index:0-TueJul20202116:32:00.wav",
+          "text": "Indian Finance Ministry officer among 25 global tax experts appointed to UN tax committee",
+          "audio": "voice/NewsId:2-index:0-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "RBI's Mastercard ban likely to create monopoly in India's credit card market",
-          "audio": "voice/NewsId:2-index:1-TueJul20202116:32:00.wav",
-          "duration": 5.736054421768707
-        },
-        {
-          "text": "Government collects Rs 1.01 lakh crore from excise, Rs 2.41 lakh crore from income tax in Q1",
-          "audio": "voice/NewsId:2-index:2-TueJul20202116:32:00.wav",
+          "text": "US closely monitoring trade situation between Australia and China, says USTR",
+          "audio": "voice/NewsId:2-index:1-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Rs 81,179 crore due to states as GST compensation for FY21",
-          "audio": "voice/NewsId:2-index:3-TueJul20202116:32:00.wav",
+          "text": "Change of Law: Plans to bring co-ops under Concurrent List",
+          "audio": "voice/NewsId:2-index:2-ThuJul22202111:54:00.wav",
+          "duration": 4.888526077097506
+        },
+        {
+          "text": "Free grains scheme: Rs 40,000 crore net increase in Budget estimate needed",
+          "audio": "voice/NewsId:2-index:3-ThuJul22202111:54:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Govt's excise collections on petrol, diesel jump 88% to Rs 3.35 lakh crore",
-          "audio": "voice/NewsId:2-index:4-TueJul20202116:32:00.wav",
-          "duration": 6.374603174603174
+          "text": "Inflation index reset: Wages under key govt schemes to rise",
+          "audio": "voice/NewsId:2-index:4-ThuJul22202111:54:00.wav",
+          "duration": 5.538684807256236
         }
       ],
-      "oneaudio": "new/NewsId:2-TueJul20202116:32:00.wav"
+      "oneaudio": "video/NewsId:2.mp4"
     },
     {
       "webId": 3,
       "newsId": 3,
       "newsDet": [
         {
-          "text": "Moneycontrol Pro Panorama | The COVID-19 shadow is getting longer",
-          "audio": "voice/NewsId:3-index:0-TueJul20202116:32:00.wav",
-          "duration": 5.666394557823129
+          "text": "30 years later, the gaps in India’s financial sector reforms are still glaring",
+          "audio": "voice/NewsId:3-index:0-ThuJul22202111:54:00.wav",
+          "duration": 6.037913832199546
         },
         {
-          "text": "India's macroeconomic fundamentals strong; recovery underway: Deepak Parekh",
-          "audio": "voice/NewsId:3-index:1-TueJul20202116:32:00.wav",
-          "duration": 6.281723356009071
+          "text": "Policy withdrawal may prove untenable, says Indranil Pan of Yes Bank",
+          "audio": "voice/NewsId:3-index:1-ThuJul22202111:54:00.wav",
+          "duration": 5.643174603174603
         },
         {
-          "text": "Rising dollar stokes nerves for emerging market investors",
-          "audio": "voice/NewsId:3-index:2-TueJul20202116:32:00.wav",
-          "duration": 4.377687074829932
+          "text": "1991 Reforms | The journey of the Indian stock markets — from Infosys to Zomato",
+          "audio": "voice/NewsId:3-index:2-ThuJul22202111:54:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "Odisha govt approves Rs 95 crore for school infrastructure development",
-          "audio": "voice/NewsId:3-index:3-TueJul20202116:32:00.wav",
-          "duration": 5.573514739229025
+          "text": "Indian Finance Ministry officer among 25 global tax experts appointed to UN tax committee",
+          "audio": "voice/NewsId:3-index:3-ThuJul22202111:54:00.wav",
+          "duration": 6.374603174603174
         },
         {
-          "text": "ADB lowers India's economic growth forecast for this fiscal to 10%",
-          "audio": "voice/NewsId:3-index:4-TueJul20202116:32:00.wav",
-          "duration": 4.9117460317460315
+          "text": "IMF to keep 2021 global growth forecast at 6%: Kristalina Georgieva",
+          "audio": "voice/NewsId:3-index:4-ThuJul22202111:54:00.wav",
+          "duration": 6.374603174603174
         }
       ],
-      "oneaudio": "new/NewsId:3-TueJul20202116:32:00.wav"
+      "oneaudio": "video/NewsId:3.mp4"
     }
   ]
 }

@@ -40,7 +40,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('32 16 * * *', function () {
+cron.schedule('54 11 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -83,7 +83,7 @@ cron.schedule('32 16 * * *', function () {
               detail.webId = id
               detail.newsId = index+1
               detail.newsDet = news
-              detail.oneaudio = `new/NewsId:${index+1}-${date}.wav`
+              detail.oneaudio = `video/NewsId:${index+1}`
               newsObject[index] = detail
             
               fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
@@ -154,7 +154,7 @@ function generate() {
     return myPromise
   }
 
-  let write = function():Promise<string> {
+  let audioDurWrite = function():Promise<string> {
     console.log(3)
     let myPromise = new Promise<string>((resolve, reject) => {
         console.log(4)
@@ -175,15 +175,15 @@ function generate() {
         if (newsInd < newsCollection.length - 1) {
             console.log(7,1)
             newsInd++
-            audioGen().then(audioDuration).then(write).then(recur1)
+            audioGen().then(audioDuration).then(audioDurWrite).then(recur1)
         } else if (objectInd < newsObject.length ) {
             console.log(7,2)
-            mergeAudiopath().then(mergeAudio).then(recur2)
+            mergeAudiopath().then(mergeAudio).then(viedogen).then(backroundGen).then(videopathwrite).then(recur2)
 
         }
   }
 
-  audioGen().then(audioDuration).then(write).then(recur1)
+  audioGen().then(audioDuration).then(audioDurWrite).then(recur1)
 
   const mergeAudiopath = function ():Promise<string>{
 
@@ -191,26 +191,31 @@ function generate() {
         const newsCollection:Array<newsContent> = newsObject[objectInd].newsDet
         const newsId:number = newsObject[objectInd].newsId
         const fileName:string = newsObject[objectInd].oneaudio
-        const third:number = newsCollection.length
+        const length:number = newsCollection.length
         let first = ''
         let second = ''
-        console.log(1)
-        for (let j = 0; j < third; j++) {
+        let third = ''
+        console.log(8)
+        for (let j = 0; j < length; j++) {
           first += ' -i ' + newsCollection[j].audio
-          second += '[' + j + ':0]'
+          if(j < length-1 ){
+          second += '[' + length + ']atrim=duration=1[g];'
+          third += '[' + j + '][g]'
+          }
         }
-        const final:string = `ffmpeg${first} \\-filter_complex '${second}concat=n=${third}:v=0:a=1[out]' \\-map '[out]' ${fileName}`
-        console.log(2)
-        resolve(final)
+        const merge:string = `ffmpeg${first} -f lavfi -i anullsrc -filter_complex \ "${second}${third}[${length-1}]concat=n=${length+length-1}:v=0:a=1" ${fileName}.wav`
+        console.log(9)
+        resolve(merge)
       })
       return myPromise1
   } 
   
-  const mergeAudio = function (final:string):Promise<string> {
+  const mergeAudio = function (merge:string):Promise<string> {
   
+    const fileName:string = newsObject[objectInd].oneaudio
     const myPromise1 = new Promise<string>((resolve, reject) => {
-        console.log(3)
-    exec(`${final}`, (error, stderr, stdout) => {
+        console.log(10)
+    exec(`${merge}`, (error, stderr, stdout) => {
       if (error) {
         console.log(`error: ${error.message}`)
         return
@@ -221,21 +226,88 @@ function generate() {
       }
       if (stdout) {
         console.log(`stdout: ${stdout}`)
-        console.log(4)
-        resolve('Done')
+        const video:string = `ffmpeg  -stream_loop -1 -i video.mp4 -i ${fileName}.wav -shortest -map 0:v:0 -map 1:a:0 -y ${fileName}:old.mp4`
+        console.log(11)
+        resolve(video)
       }
     })
     })
     return myPromise1
   }
   
+  const viedogen = function(video:string):Promise<string>{
+
+    const fileName:string = newsObject[objectInd].oneaudio
+    const myPromise1 = new Promise<string>((resolve, reject) => {
+      console.log(12)
+      exec(`${video}`, (error, stderr, stdout) => {
+        if (error) {
+          console.log(`error: ${error.message}`)
+          return
+        }
+        if (stderr) {
+          console.log(`stderr: ${stderr}`)
+          return
+        }
+        if (stdout) {
+          console.log(`stdout: ${stdout}`)
+          console.log(13)
+          const backroundMusic:string = `ffmpeg -i bgm.wav -i ${fileName}:old.mp4 -filter_complex \ "[0:a]volume=0.3[a1];[1:a]volume=2[a2];[a1][a2]amerge,pan=stereo|c0<c0+c2|c1<c1+c3[out]" -map 1:v -map "[out]" -c:v copy -c:a aac -shortest ${fileName}.mp4`
+          fs.unlinkSync(`${fileName}.wav`)
+          resolve(backroundMusic)
+        }
+      })
+      })
+      return myPromise1
+  }
+  
+  const backroundGen = function(backroundMusic:string):Promise<string>{
+  
+    const fileName:string = newsObject[objectInd].oneaudio
+    const myPromise1 = new Promise<string>((resolve, reject) => {
+      console.log(14)
+      exec(`${backroundMusic}`, (error, stderr, stdout) => {
+        if (error) {
+          console.log(`error: ${error.message}`)
+          return
+        }
+        if (stderr) {
+          console.log(`stderr: ${stderr}`)
+          return
+        }
+        if (stdout) {
+          console.log(`stdout: ${stdout}`)
+          console.log(15)
+          fs.unlinkSync(`${fileName}:old.mp4`)
+          const filepath:string = `${fileName}.mp4`
+          resolve(filepath)
+        }
+      })
+      })
+      return myPromise1
+  }
+
+  let videopathwrite = function(filepath:string):Promise<string> {
+    console.log(16)
+    let myPromise = new Promise<string>((resolve, reject) => {
+        console.log(4)
+        newsObject[objectInd].oneaudio = filepath
+        fs.writeFile('ref.json',JSON.stringify(contentJson, null, 2) , function (err) {
+            if (err) throw err
+            console.log(17)
+            resolve('path wrote')
+        })   
+    })
+    return myPromise
+  }
+
   const recur2 = function(){
-      console.log(5)
+      console.log(18)
       if(objectInd <newsObject.length-1){
-          console.log(6)
+          console.log('done', 19)
             newsInd = 0
             objectInd++
-            audioGen().then(audioDuration).then(write).then(recur1)
+            audioGen().then(audioDuration).then(audioDurWrite).then(recur1)
       }
       else{console.log('All audio generated')}
   }
