@@ -40,7 +40,7 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('54 11 * * *', function () {
+cron.schedule('22 15 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
@@ -199,7 +199,7 @@ function generate() {
         for (let j = 0; j < length; j++) {
           first += ' -i ' + newsCollection[j].audio
           if(j < length-1 ){
-          second += '[' + length + ']atrim=duration=1[g];'
+          second += '[' + length + ']atrim=duration=2[g];'
           third += '[' + j + '][g]'
           }
         }
@@ -252,7 +252,7 @@ function generate() {
         if (stdout) {
           console.log(`stdout: ${stdout}`)
           console.log(13)
-          const backroundMusic:string = `ffmpeg -i bgm.wav -i ${fileName}:old.mp4 -filter_complex \ "[0:a]volume=0.3[a1];[1:a]volume=2[a2];[a1][a2]amerge,pan=stereo|c0<c0+c2|c1<c1+c3[out]" -map 1:v -map "[out]" -c:v copy -c:a aac -shortest ${fileName}.mp4`
+          const backroundMusic:string = `ffmpeg -i bgm.wav -i ${fileName}:old.mp4 -filter_complex \ "[0:a]volume=0.2[a1];[1:a]volume=2[a2];[a1][a2]amerge,pan=stereo|c0<c0+c2|c1<c1+c3[out]" -map 1:v -map "[out]" -c:v copy -c:a aac -shortest ${fileName}.mp4`
           fs.unlinkSync(`${fileName}.wav`)
           resolve(backroundMusic)
         }
@@ -315,10 +315,6 @@ function generate() {
 }
   
 
-
 app.listen(8588, function () {
   console.log('Node server is running 8588..')
 })
-
-
-
