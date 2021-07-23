@@ -39,65 +39,65 @@
   ],
   "newsObject": [
     {
-      "webId": 2,
+      "webId": 1,
       "newsId": 1,
       "newsDet": [
         {
-          "text": "Indian Finance Ministry officer among 25 global tax experts appointed to UN tax committee",
-          "audio": "voice/NewsId:1-index:0-ThuJul22202115:15:00.wav",
+          "text": "Govt set to overshoot FY22 tax collection target as Q1 mop-up reaches Rs 5.6 lakh cr: Icra",
+          "audio": "voice/NewsId:1-index:0-FriJul23202121:04:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "US closely monitoring trade situation between Australia and China, says USTR",
-          "audio": "voice/NewsId:1-index:1-ThuJul22202115:15:00.wav",
+          "text": "Forex reserves zoom to record high of $612.73 billion",
+          "audio": "voice/NewsId:1-index:1-FriJul23202121:04:00.wav",
+          "duration": 4.888526077097506
+        },
+        {
+          "text": "View: A digital money rush is great. A run, not so much",
+          "audio": "voice/NewsId:1-index:2-FriJul23202121:04:00.wav",
+          "duration": 5.992199546485261
+        },
+        {
+          "text": "No likely impact of Cairn and Devas lawsuits on its Air India's disinvestment process: Govt",
+          "audio": "voice/NewsId:1-index:3-FriJul23202121:04:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Change of Law: Plans to bring co-ops under Concurrent List",
-          "audio": "voice/NewsId:1-index:2-ThuJul22202115:15:00.wav",
-          "duration": 4.7608163265306125
-        },
-        {
-          "text": "Free grains scheme: Rs 40,000 crore net increase in Budget estimate needed",
-          "audio": "voice/NewsId:1-index:3-ThuJul22202115:15:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Inflation index reset: Wages under key govt schemes to rise",
-          "audio": "voice/NewsId:1-index:4-ThuJul22202115:15:00.wav",
-          "duration": 5.712834467120182
+          "text": "‘Mastercard’s dual record maintenance led to RBI ban’",
+          "audio": "voice/NewsId:1-index:4-FriJul23202121:04:00.wav",
+          "duration": 3.9365079365079363
         }
       ],
       "oneaudio": "video/NewsId:1.mp4"
     },
     {
-      "webId": 1,
+      "webId": 2,
       "newsId": 2,
       "newsDet": [
         {
-          "text": "‘Mastercard’s dual record maintenance led to RBI ban’",
-          "audio": "voice/NewsId:2-index:0-ThuJul22202115:15:00.wav",
-          "duration": 3.8436281179138323
-        },
-        {
-          "text": "FDI investment doubled in April-May, but secondary investments dominate inflows: RBI data",
-          "audio": "voice/NewsId:2-index:1-ThuJul22202115:15:00.wav",
+          "text": "Govt set to overshoot FY22 tax collection target as Q1 mop-up reaches Rs 5.6 lakh cr: Icra",
+          "audio": "voice/NewsId:2-index:0-FriJul23202121:04:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Excise duty rates on petrol, diesel calibrated to generate resources for infrastructure development: FinMin",
-          "audio": "voice/NewsId:2-index:2-ThuJul22202115:15:00.wav",
+          "text": "Forex reserves zoom to record high of USD 612.73 bn",
+          "audio": "voice/NewsId:2-index:1-FriJul23202121:04:00.wav",
+          "duration": 6.107573696145125
+        },
+        {
+          "text": "Road ahead more daunting, need to recalibrate priorities: Manmohan Singh on 30 yrs of liberalisation",
+          "audio": "voice/NewsId:2-index:2-FriJul23202121:04:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Govt seeks Parliament nod for Rs 1.87 lakh crore supplementary demands for this fiscal",
-          "audio": "voice/NewsId:2-index:3-ThuJul22202115:15:00.wav",
-          "duration": 6.374603174603174
+          "text": "India sees significant improvement in UNESCAP score on trade facilitation",
+          "audio": "voice/NewsId:2-index:3-FriJul23202121:04:00.wav",
+          "duration": 5.550294784580499
         },
         {
-          "text": "E-way bill generation sees a sharp increase in July hinting at recovery",
-          "audio": "voice/NewsId:2-index:4-ThuJul22202115:15:00.wav",
-          "duration": 5.352925170068027
+          "text": "India improves ranking in trade facilitation aided by reforms",
+          "audio": "voice/NewsId:2-index:4-FriJul23202121:04:00.wav",
+          "duration": 5.0278458049886625
         }
       ],
       "oneaudio": "video/NewsId:2.mp4"
@@ -107,128 +107,32 @@
       "newsId": 3,
       "newsDet": [
         {
-          "text": "Over 13 lakh MSME loan accounts restructured by public sector banks: Narayan Rane",
-          "audio": "voice/NewsId:3-index:0-ThuJul22202115:15:00.wav",
+          "text": "The Reading List: July 23, 2021",
+          "audio": "voice/NewsId:3-index:0-FriJul23202121:04:00.wav",
+          "duration": 4.1570975056689345
+        },
+        {
+          "text": "Business in the Week Ahead (July 26-30, 2021)",
+          "audio": "voice/NewsId:3-index:1-FriJul23202121:04:00.wav",
+          "duration": 5.387755102040816
+        },
+        {
+          "text": "Eurozone economy booms at fastest rate in 21 years",
+          "audio": "voice/NewsId:3-index:2-FriJul23202121:04:00.wav",
+          "duration": 4.7259863945578235
+        },
+        {
+          "text": "Moneycontrol Pro Panorama | Citius, Altius, Fortius, Zomato ",
+          "audio": "voice/NewsId:3-index:3-FriJul23202121:04:00.wav",
           "duration": 6.374603174603174
         },
         {
-          "text": "Chart of the Day | Salaries bounced back after pandemic hit in FY21",
-          "audio": "voice/NewsId:3-index:1-ThuJul22202115:15:00.wav",
-          "duration": 6.119183673469387
-        },
-        {
-          "text": "30 Years of Reforms | Change was in the air",
-          "audio": "voice/NewsId:3-index:2-ThuJul22202115:15:00.wav",
-          "duration": 4.18031746031746
-        },
-        {
-          "text": "30 years later, the gaps in India’s financial sector reforms are still glaring",
-          "audio": "voice/NewsId:3-index:3-ThuJul22202115:15:00.wav",
-          "duration": 6.130793650793651
-        },
-        {
-          "text": "Policy withdrawal may prove untenable, says Indranil Pan of Yes Bank",
-          "audio": "voice/NewsId:3-index:4-ThuJul22202115:15:00.wav",
-          "duration": 5.852154195011338
+          "text": "30 years later, the reforms journey continues",
+          "audio": "voice/NewsId:3-index:4-FriJul23202121:04:00.wav",
+          "duration": 4.029387755102041
         }
       ],
       "oneaudio": "video/NewsId:3.mp4"
-    },
-    {
-      "webId": 1,
-      "newsId": 4,
-      "newsDet": [
-        {
-          "text": "‘Mastercard’s dual record maintenance led to RBI ban’",
-          "audio": "voice/NewsId:4-index:0-ThuJul22202115:22:00.wav",
-          "duration": 3.79718820861678
-        },
-        {
-          "text": "FDI investment doubled in April-May, but secondary investments dominate inflows: RBI data",
-          "audio": "voice/NewsId:4-index:1-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Excise duty rates on petrol, diesel calibrated to generate resources for infrastructure development: FinMin",
-          "audio": "voice/NewsId:4-index:2-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Govt seeks Parliament nod for Rs 1.87 lakh crore supplementary demands for this fiscal",
-          "audio": "voice/NewsId:4-index:3-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "E-way bill generation sees a sharp increase in July hinting at recovery",
-          "audio": "voice/NewsId:4-index:4-ThuJul22202115:22:00.wav",
-          "duration": 5.1787755102040816
-        }
-      ],
-      "oneaudio": "video/NewsId:4.mp4"
-    },
-    {
-      "webId": 2,
-      "newsId": 5,
-      "newsDet": [
-        {
-          "text": "Indian Finance Ministry officer among 25 global tax experts appointed to UN tax committee",
-          "audio": "voice/NewsId:5-index:0-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "US closely monitoring trade situation between Australia and China, says USTR",
-          "audio": "voice/NewsId:5-index:1-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Change of Law: Plans to bring co-ops under Concurrent List",
-          "audio": "voice/NewsId:5-index:2-ThuJul22202115:22:00.wav",
-          "duration": 4.958185941043084
-        },
-        {
-          "text": "Free grains scheme: Rs 40,000 crore net increase in Budget estimate needed",
-          "audio": "voice/NewsId:5-index:3-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Inflation index reset: Wages under key govt schemes to rise",
-          "audio": "voice/NewsId:5-index:4-ThuJul22202115:22:00.wav",
-          "duration": 5.585124716553288
-        }
-      ],
-      "oneaudio": "video/NewsId:5.mp4"
-    },
-    {
-      "webId": 3,
-      "newsId": 6,
-      "newsDet": [
-        {
-          "text": "Over 13 lakh MSME loan accounts restructured by public sector banks: Narayan Rane",
-          "audio": "voice/NewsId:6-index:0-ThuJul22202115:22:00.wav",
-          "duration": 6.374603174603174
-        },
-        {
-          "text": "Chart of the Day | Salaries bounced back after pandemic hit in FY21",
-          "audio": "voice/NewsId:6-index:1-ThuJul22202115:22:00.wav",
-          "duration": 5.643174603174603
-        },
-        {
-          "text": "30 Years of Reforms | Change was in the air",
-          "audio": "voice/NewsId:6-index:2-ThuJul22202115:22:00.wav",
-          "duration": 4.122267573696145
-        },
-        {
-          "text": "30 years later, the gaps in India’s financial sector reforms are still glaring",
-          "audio": "voice/NewsId:6-index:3-ThuJul22202115:22:00.wav",
-          "duration": 5.852154195011338
-        },
-        {
-          "text": "Policy withdrawal may prove untenable, says Indranil Pan of Yes Bank",
-          "audio": "voice/NewsId:6-index:4-ThuJul22202115:22:00.wav",
-          "duration": 5.886984126984127
-        }
-      ],
-      "oneaudio": "video/NewsId:6.mp4"
     }
   ]
 }

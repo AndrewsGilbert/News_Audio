@@ -8,6 +8,13 @@ import cron from 'node-cron'
 import { exec } from 'child_process'
 const load = require('audio-loader')
 
+import { IgApiClient } from 'instagram-private-api'
+require('dotenv').config()
+import util from 'util'
+require('util.promisify').shim()
+const readFileAsync = util.promisify(fs.readFile)
+
+
 const app = express()
 
 app.use(bodyParser.urlencoded({
@@ -40,14 +47,16 @@ type content = {
     newsObject:Array<news>
 }
 
-cron.schedule('22 15 * * *', function () {
+
+
+cron.schedule('4 21 * * *', function () {
 
     const content: string = fs.readFileSync('ref.json', 'utf8')
     const contentJson: content = JSON.parse(content)
     const web: Array<web> = contentJson.web
     const newsObject: Array<news> = contentJson.newsObject
     const date:string = new Date().toString().replace(/[{(+)}]|GMT|0530|India Standard Time| /g, '')
-
+    
     
     for (let i: number = 0; i < web.length; i++) {
 
@@ -92,7 +101,7 @@ cron.schedule('22 15 * * *', function () {
             
             }
         })
-    }
+      } 
 })
 
 function generate() {
@@ -178,7 +187,7 @@ function generate() {
             audioGen().then(audioDuration).then(audioDurWrite).then(recur1)
         } else if (objectInd < newsObject.length ) {
             console.log(7,2)
-            mergeAudiopath().then(mergeAudio).then(viedogen).then(backroundGen).then(videopathwrite).then(recur2)
+            mergeAudiopath().then(mergeAudio).then(viedogen).then(backroundGen).then(videopathwrite).then(postvideo).then(recur2)
 
         }
   }
@@ -287,22 +296,51 @@ function generate() {
       return myPromise1
   }
 
-  let videopathwrite = function(filepath:string):Promise<string> {
+  const videopathwrite = function(filepath:string):Promise<string> {
     console.log(16)
-    let myPromise = new Promise<string>((resolve, reject) => {
+    const myPromise = new Promise<string>((resolve, reject) => {
         console.log(4)
         newsObject[objectInd].oneaudio = filepath
         fs.writeFile('ref.json',JSON.stringify(contentJson, null, 2) , function (err) {
             if (err) throw err
             console.log(17)
-            resolve('path wrote')
+            resolve(filepath)
         })   
     })
     return myPromise
   }
 
+  const postvideo = async (filepath:string) => {
+    const { username, password } = process.env
+    const ig = new IgApiClient()
+    console.log(18)
+    try {
+      if (typeof username === 'string' && typeof password === 'string' ){
+      console.log(19)
+      ig.state.generateDevice(username)
+      await ig.simulate.preLoginFlow()
+      const user = await ig.account.login(username, password)
+      const coverPath:string = './cover.jpg'
+      const webname:string = web[(newsObject[objectInd].webId) - 1].name
+      const date:string = new Date().toString()
+      const published = await ig.publish.video({
+  
+        video: await readFileAsync(filepath),
+        coverImage: await readFileAsync(coverPath),
+        caption:`This Economical news clip is from ${webname} on ${date}`
+  
+      })
+      console.log(20)
+      console.log(published)
+    }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   const recur2 = function(){
-      console.log(18)
+      console.log(21)
       if(objectInd <newsObject.length-1){
           console.log('done', 19)
             newsInd = 0
