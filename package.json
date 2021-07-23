@@ -13,14 +13,17 @@
     "audioconcat": "*",
     "body-parser": "*",
     "cheerio": "*",
+    "dotenv": "^10.0.0",
     "express": "*",
     "file-system": "*",
+    "instagram-private-api": "^1.45.1",
     "node-cron": "*",
     "node-fetch": "*",
     "path": "*",
     "q": "*",
     "request": "*",
-    "ts-node": "*"
+    "ts-node": "*",
+    "util.promisify": "^1.1.1"
   },
   "devDependencies": {
     "@types/express": "*",
