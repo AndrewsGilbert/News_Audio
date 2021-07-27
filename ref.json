@@ -43,96 +43,90 @@
       "newsId": 1,
       "newsDet": [
         {
-          "text": "Govt set to overshoot FY22 tax collection target as Q1 mop-up reaches Rs 5.6 lakh cr: Icra",
-          "audio": "voice/NewsId:1-index:0-FriJul23202121:04:00.wav",
-          "duration": 6.374603174603174
+          "text": "10 CPSEs report profit in 2020-21: Heavy Industries Minister",
+          "audio": "voice/NewsId:1-index:0-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Forex reserves zoom to record high of $612.73 billion",
-          "audio": "voice/NewsId:1-index:1-FriJul23202121:04:00.wav",
-          "duration": 4.888526077097506
+          "text": "Govt paid Rs 164.5 cr to Infosys for new I-T portal: Chaudhary",
+          "audio": "voice/NewsId:1-index:1-TueJul27202113:48:00.wav"
         },
         {
-          "text": "View: A digital money rush is great. A run, not so much",
-          "audio": "voice/NewsId:1-index:2-FriJul23202121:04:00.wav",
-          "duration": 5.992199546485261
+          "text": "Govt's net tax collection rises 86% to Rs 5.57 lakh crore in Q1",
+          "audio": "voice/NewsId:1-index:2-TueJul27202113:48:00.wav"
         },
         {
-          "text": "No likely impact of Cairn and Devas lawsuits on its Air India's disinvestment process: Govt",
-          "audio": "voice/NewsId:1-index:3-FriJul23202121:04:00.wav",
-          "duration": 6.374603174603174
+          "text": "No plan to print currency notes to tide over crisis: FM ",
+          "audio": "voice/NewsId:1-index:3-TueJul27202113:48:00.wav"
         },
         {
-          "text": "‘Mastercard’s dual record maintenance led to RBI ban’",
-          "audio": "voice/NewsId:1-index:4-FriJul23202121:04:00.wav",
-          "duration": 3.9365079365079363
+          "text": "Reforms help banks recover Rs 5.5 lakh crore of bad debt: Govt",
+          "audio": "voice/NewsId:1-index:4-TueJul27202113:48:00.wav"
         }
       ],
-      "oneaudio": "video/NewsId:1.mp4"
+      "oneaudio": "video/NewsId:1.mp4",
+      "audioGen": "no",
+      "videoGen": "no",
+      "postVideo": "no"
     },
     {
       "webId": 2,
       "newsId": 2,
       "newsDet": [
         {
-          "text": "Govt set to overshoot FY22 tax collection target as Q1 mop-up reaches Rs 5.6 lakh cr: Icra",
-          "audio": "voice/NewsId:2-index:0-FriJul23202121:04:00.wav",
-          "duration": 6.374603174603174
+          "text": "Deficit Financing: No plan to print extra money, says FM",
+          "audio": "voice/NewsId:2-index:0-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Forex reserves zoom to record high of USD 612.73 bn",
-          "audio": "voice/NewsId:2-index:1-FriJul23202121:04:00.wav",
-          "duration": 6.107573696145125
+          "text": "Pre-pack scheme: FM introduces Bill in LS to replace ordinance",
+          "audio": "voice/NewsId:2-index:1-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Road ahead more daunting, need to recalibrate priorities: Manmohan Singh on 30 yrs of liberalisation",
-          "audio": "voice/NewsId:2-index:2-FriJul23202121:04:00.wav",
-          "duration": 6.374603174603174
+          "text": "Unemployment rate rises again to reach 7.14%",
+          "audio": "voice/NewsId:2-index:2-TueJul27202113:48:00.wav"
         },
         {
-          "text": "India sees significant improvement in UNESCAP score on trade facilitation",
-          "audio": "voice/NewsId:2-index:3-FriJul23202121:04:00.wav",
-          "duration": 5.550294784580499
+          "text": "GST e-way bill generation gathers momentum in July",
+          "audio": "voice/NewsId:2-index:3-TueJul27202113:48:00.wav"
         },
         {
-          "text": "India improves ranking in trade facilitation aided by reforms",
-          "audio": "voice/NewsId:2-index:4-FriJul23202121:04:00.wav",
-          "duration": 5.0278458049886625
+          "text": "Modi govt tables Bill in Lok Sabha to amend Insolvency Law",
+          "audio": "voice/NewsId:2-index:4-TueJul27202113:48:00.wav"
         }
       ],
-      "oneaudio": "video/NewsId:2.mp4"
+      "oneaudio": "video/NewsId:2.mp4",
+      "audioGen": "no",
+      "videoGen": "no",
+      "postVideo": "no"
     },
     {
       "webId": 3,
       "newsId": 3,
       "newsDet": [
         {
-          "text": "The Reading List: July 23, 2021",
-          "audio": "voice/NewsId:3-index:0-FriJul23202121:04:00.wav",
-          "duration": 4.1570975056689345
+          "text": "India's GDP growth expected to be 8.8-9% in FY22: Care Ratings",
+          "audio": "voice/NewsId:3-index:0-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Business in the Week Ahead (July 26-30, 2021)",
-          "audio": "voice/NewsId:3-index:1-FriJul23202121:04:00.wav",
-          "duration": 5.387755102040816
+          "text": "COVID 2nd wave may have more lasting damage on India's economy, exports to drive recovery: Moody's Analytics",
+          "audio": "voice/NewsId:3-index:1-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Eurozone economy booms at fastest rate in 21 years",
-          "audio": "voice/NewsId:3-index:2-FriJul23202121:04:00.wav",
-          "duration": 4.7259863945578235
+          "text": "Higher inflation a transitory hump, to help RBI remain dovish in August review: Report",
+          "audio": "voice/NewsId:3-index:2-TueJul27202113:48:00.wav"
         },
         {
-          "text": "Moneycontrol Pro Panorama | Citius, Altius, Fortius, Zomato ",
-          "audio": "voice/NewsId:3-index:3-FriJul23202121:04:00.wav",
-          "duration": 6.374603174603174
+          "text": "Maharashtra tops peak power demand in April-June",
+          "audio": "voice/NewsId:3-index:3-TueJul27202113:48:00.wav"
         },
         {
-          "text": "30 years later, the reforms journey continues",
-          "audio": "voice/NewsId:3-index:4-FriJul23202121:04:00.wav",
-          "duration": 4.029387755102041
+          "text": "Govt's net tax collection rises 86% to Rs 5.57 lakh crore in Q1",
+          "audio": "voice/NewsId:3-index:4-TueJul27202113:48:00.wav"
         }
       ],
-      "oneaudio": "video/NewsId:3.mp4"
+      "oneaudio": "video/NewsId:3.mp4",
+      "audioGen": "no",
+      "videoGen": "no",
+      "postVideo": "no"
     }
   ]
 }
