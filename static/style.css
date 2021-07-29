@@ -1,0 +1,90 @@
+.button {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px 5px;
+    cursor: pointer;
+  }
+  
+  .button1 {
+      background-color: #4ec953;
+      border: solid #4ec953;
+      border-radius: 5px;
+      border-width: 10px 10px;
+  } 
+  .button2 {
+      background-color: #587cbe;
+      border: solid #587cbe;
+      border-radius: 5px;
+      border-width: 10px 23px;
+  }
+  .button3 {
+      background-color: #aab41f;
+      border: solid #aab41f;
+      border-radius: 5px;
+      border-width: 10px 35px;
+  }
+
+  h1 {
+    border: solid #e47215;
+    width: 100%;
+    padding: 20px 0px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    margin: 10px 5px;
+    background-color: #e47215;
+  }
+  
+  h2{
+   font-size: 25px;
+  }
+
+  .text {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 5px;
+  }
+
+  .font1{
+    font-size: 20px;
+  }
+
+  .font2{
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+
+  .ntext{
+    color: black;
+    font-size: 20px;
+    margin: 5px 5px;
+    font-weight: bold;
+  }
+
+  .tc1 {
+    background-color: #4ec953;
+    border: solid #4ec953;
+    border-radius: 20px;
+    border-width: 10px 10px;
+  } 
+
+  .tc2 {
+    background-color: #587cbe;
+    border: solid #587cbe;
+    border-radius: 20px;
+    border-width: 10px 10px;
+  } 
+
+  .tc3 {
+    background-color: #aab41f;
+    border: solid #aab41f;
+    border-radius: 20px;
+    border-width: 10px 10px;
+ } 

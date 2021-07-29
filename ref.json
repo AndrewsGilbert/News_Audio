@@ -64,9 +64,9 @@
         }
       ],
       "oneaudio": "video/NewsId:1.mp4",
-      "audioGen": "no",
-      "videoGen": "no",
-      "postVideo": "no"
+      "audioGen": "yes",
+      "videoGen": "yes",
+      "postVideo": "yes"
     },
     {
       "webId": 2,
@@ -94,9 +94,9 @@
         }
       ],
       "oneaudio": "video/NewsId:2.mp4",
-      "audioGen": "no",
-      "videoGen": "no",
-      "postVideo": "no"
+      "audioGen": "yes",
+      "videoGen": "yes",
+      "postVideo": "yes"
     },
     {
       "webId": 3,
@@ -124,6 +124,96 @@
         }
       ],
       "oneaudio": "video/NewsId:3.mp4",
+      "audioGen": "yes",
+      "videoGen": "yes",
+      "postVideo": "yes"
+    },
+    {
+      "webId": 1,
+      "newsId": 4,
+      "newsDet": [
+        {
+          "text": "Unlawful deals: Claims of Rs 1.6 lakh crore filed at NCLT by resolution professionals of companies gone bankrupt",
+          "audio": "voice/NewsId:4-index:0-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Digital payments up 30.2% in FY21: RBI data",
+          "audio": "voice/NewsId:4-index:1-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Lok Sabha approves first batch of supplementary demands totalling Rs 23,675 cr",
+          "audio": "voice/NewsId:4-index:2-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Cairn arbitration: Govt confirms French court order against Indian assets",
+          "audio": "voice/NewsId:4-index:3-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "10 CPSEs report profit in 2020-21: Heavy Industries Minister",
+          "audio": "voice/NewsId:4-index:4-ThuJul29202113:19:00.wav"
+        }
+      ],
+      "oneaudio": "video/NewsId:4",
+      "audioGen": "no",
+      "videoGen": "no",
+      "postVideo": "no"
+    },
+    {
+      "webId": 2,
+      "newsId": 5,
+      "newsDet": [
+        {
+          "text": "Changes to DICGC Act: Deposit insurance cover gets stronger",
+          "audio": "voice/NewsId:5-index:0-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Disinvestment: BPCL, LIC transactions by year-end, strategic sales in focus, says Dipam secretary Tuhin Pandey",
+          "audio": "voice/NewsId:5-index:1-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Process of creation of unorganised sector database to begin next month",
+          "audio": "voice/NewsId:5-index:2-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "India expected to see 7 pc growth next fiscal: CEA",
+          "audio": "voice/NewsId:5-index:3-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Cabinet clears amendment to DICGC Act; bank depositors to get coverage of up to Rs 5 lakh",
+          "audio": "voice/NewsId:5-index:4-ThuJul29202113:19:00.wav"
+        }
+      ],
+      "oneaudio": "video/NewsId:5",
+      "audioGen": "no",
+      "videoGen": "no",
+      "postVideo": "no"
+    },
+    {
+      "webId": 3,
+      "newsId": 6,
+      "newsDet": [
+        {
+          "text": "India's gold demand up 19% in April-June quarter at 76 tonne: WGC",
+          "audio": "voice/NewsId:6-index:0-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Global stimulus capital, corporate liquidity, govt initiatives set up perfect stage for India’s accelerated digital economy surge: Mohandas Pai",
+          "audio": "voice/NewsId:6-index:1-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Rising retail borrower stress points to uneven economic recovery",
+          "audio": "voice/NewsId:6-index:2-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "Do Indian markets have enough capacity to absorb the spate of initial public offers?",
+          "audio": "voice/NewsId:6-index:3-ThuJul29202113:19:00.wav"
+        },
+        {
+          "text": "National Education Policy: One year of steady reforms, a few more miles to go",
+          "audio": "voice/NewsId:6-index:4-ThuJul29202113:19:00.wav"
+        }
+      ],
+      "oneaudio": "video/NewsId:6",
       "audioGen": "no",
       "videoGen": "no",
       "postVideo": "no"

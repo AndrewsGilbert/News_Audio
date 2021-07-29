@@ -19,6 +19,8 @@ const app = express()
 
 app.use(bodyParser.urlencoded({extended:true}))
 
+app.use(express.static(path.join(__dirname,'static')))
+
 type web = {
     id:number
     name:string
@@ -54,27 +56,7 @@ type jsnews = {
 
 app.get('/', function (req, res) {
 
-  res.sendFile(path.join(__dirname, '/view/home.HTML'))
-  
-})
-
-app.get('/theeconomictimes', function (req, res) {
-  
-  res.sendFile(path.join(__dirname, '/view/tct.HTML'))
-  
-})
-
-
-app.get('/financialexpress', function (req, res) {
-
-  res.sendFile(path.join(__dirname, '/view/fe.HTML'))
-  
-})
-
-
-app.get('/moneycontrol', function (req, res) {
-
-  res.sendFile(path.join(__dirname, '/view/mc.HTML'))
+  res.sendFile(path.join(__dirname,  '/static/home.html'))
   
 })
 
@@ -90,37 +72,17 @@ app.post('/generateaudio', function (req, res) {
 
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
-  const web: Array<web> = contentJson.web
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.webId)
-  const webId:number = newsObject[objectInd].webId
+  const objectInd = Number(req.body.ind)
   let newsInd:number  = 0
+ 
 
-  if(newsObject[objectInd].audioGen === 'yes'){
-
-    alert('Audio Already Generated')
-    if(webId === 1 ){
-      res.redirect('http://localhost:8588/theeconomictimes')
-    }
-    if(webId === 2 ){
-      res.redirect('http://localhost:8588/financialexpress')
-    }
-    if(webId === 3 ){
-      res.redirect('http://localhost:8588/moneycontrol')
-    }
-      
-  }
-
-  else{
-
-    let audioGen = function ():Promise<string> {
+  let audioGen = function ():Promise<string> {
 
       const newsCollection: Array<newsContent> = newsObject[objectInd].newsDet
       const data = newsCollection[newsInd].text
       const fileName = newsCollection[newsInd].audio
-
-    
-
+  
       let myPromise = new Promise<string>((resolve, reject) => {
 
         if (objectInd < newsObject.length && newsInd < newsCollection.length) {
@@ -144,9 +106,9 @@ app.post('/generateaudio', function (req, res) {
         }
       })
       return myPromise
-    }
+  }
 
-    let recur1 = function () {
+  let recur1 = function () {
   
       const newsCollection: Array<newsContent> = newsObject[objectInd].newsDet
 
@@ -156,11 +118,11 @@ app.post('/generateaudio', function (req, res) {
         } else if (objectInd < newsObject.length ) {
             mergeAudiopath().then(mergeAudio)
         }
-    }
+  }
 
     audioGen().then(recur1)
 
-    let mergeAudiopath = function ():Promise<string>{
+  let mergeAudiopath = function ():Promise<string>{
 
       const myPromise1 = new Promise<string>((resolve, reject) => {
           const newsCollection:Array<newsContent> = newsObject[objectInd].newsDet
@@ -170,7 +132,6 @@ app.post('/generateaudio', function (req, res) {
           let first = ''
           let second = ''
           let third = ''
-          console.log(8)
           for (let j = 0; j < length; j++) {
             first += ' -i ' + newsCollection[j].audio
             if(j < length-1 ){
@@ -182,9 +143,9 @@ app.post('/generateaudio', function (req, res) {
           resolve(merge)
         })
         return myPromise1
-    } 
+  } 
     
-    let mergeAudio = function (merge:string):Promise<string> {
+  let mergeAudio = function (merge:string):Promise<string> {
     
       const fileName:string = newsObject[objectInd].oneaudio
       const myPromise1 = new Promise<string>((resolve, reject) => {
@@ -201,70 +162,25 @@ app.post('/generateaudio', function (req, res) {
             console.log(`stdout: ${stdout}`)
             newsObject[objectInd].audioGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            alert('Audio  Generated')
-            if(webId === 1 ){
-              res.redirect('http://localhost:8588/theeconomictimes')
-            }
-            if(webId === 2 ){
-              res.redirect('http://localhost:8588/financialexpress')
-            }
-            if(webId === 3 ){
-              res.redirect('http://localhost:8588/moneycontrol')
-            }
+            res.end('Audio Generated')
             resolve('Audio Generated')
           }
         })
       })
       return myPromise1
-    }
-  }
+  } 
 })
 
 app.post('/generatevideo', function (req, res) {
 
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
-  const web: Array<web> = contentJson.web
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.webId)
-  const webId:number = newsObject[objectInd].webId
+  const objectInd = Number(req.body.ind)
   const fileName:string = newsObject[objectInd].oneaudio
   const video:string = `ffmpeg  -stream_loop -1 -i video.mp4 -i ${fileName}.wav -shortest -map 0:v:0 -map 1:a:0 -y ${fileName}:old.mp4`
 
-
-  if(newsObject[objectInd].videoGen === 'yes'){
-
-    alert('Video Already Generated')
-    if(webId === 1 ){
-      res.redirect('http://localhost:8588/theeconomictimes')
-    }
-    if(webId === 2 ){
-      res.redirect('http://localhost:8588/financialexpress')
-    }
-    if(webId === 3 ){
-      res.redirect('http://localhost:8588/moneycontrol')
-    }
-      
-  }
-
-  else if(newsObject[objectInd].audioGen === 'no'){
-
-    alert('Audio is not yet Generated')
-    if(webId === 1 ){
-      res.redirect('http://localhost:8588/theeconomictimes')
-    }
-    if(webId === 2 ){
-      res.redirect('http://localhost:8588/financialexpress')
-    }
-    if(webId === 3 ){
-      res.redirect('http://localhost:8588/moneycontrol')
-    }
-      
-  }
-
-  else{
-
-    const viedogen = function():Promise<string>{
+  const viedogen = function():Promise<string>{
       const fileName:string = newsObject[objectInd].oneaudio
       const myPromise1 = new Promise<string>((resolve, reject) => {
 
@@ -286,9 +202,9 @@ app.post('/generatevideo', function (req, res) {
         })
       })
       return myPromise1
-    }
+  }
   
-    const backroundGen = function(backroundMusic:string):Promise<string>{
+  const backroundGen = function(backroundMusic:string):Promise<string>{
   
       const fileName:string = newsObject[objectInd].oneaudio
       const myPromise1 = new Promise<string>((resolve, reject) => {
@@ -309,24 +225,14 @@ app.post('/generatevideo', function (req, res) {
             newsObject[objectInd].oneaudio = filepath
             newsObject[objectInd].videoGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            alert('Video  Generated')
-            if(webId === 1 ){
-              res.redirect('http://localhost:8588/theeconomictimes')
-            }
-            if(webId === 2 ){
-              res.redirect('http://localhost:8588/financialexpress')
-            }
-            if(webId === 3 ){
-              res.redirect('http://localhost:8588/moneycontrol')
-            }
+            res.end('Video  Generated')
             resolve('Video Generated')
           }
         })
       })
       return myPromise1
-    }
-    viedogen().then(backroundGen)
   }
+  viedogen().then(backroundGen)
 })
 
 
@@ -336,43 +242,12 @@ app.post('/postvideo', function (req, res) {
   const contentJson: content = JSON.parse(content)
   const web: Array<web> = contentJson.web
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.webId)
+  const objectInd = Number(req.body.ind)
   const webId:number = newsObject[objectInd].webId
   const fileName:string = newsObject[objectInd].oneaudio
 
-  if(newsObject[objectInd].postVideo === 'yes'){
 
-    alert('Video Already Posted')
-    if(webId === 1 ){
-      res.redirect('http://localhost:8588/theeconomictimes')
-    }
-    if(webId === 2 ){
-      res.redirect('http://localhost:8588/financialexpress')
-    }
-    if(webId === 3 ){
-      res.redirect('http://localhost:8588/moneycontrol')
-    }
-      
-  }
-
-  else if(newsObject[objectInd].videoGen === 'no'){
-
-    alert('Video is not yet Generated')
-    if(webId === 1 ){
-      res.redirect('http://localhost:8588/theeconomictimes')
-    }
-    if(webId === 2 ){
-      res.redirect('http://localhost:8588/financialexpress')
-    }
-    if(webId === 3 ){
-      res.redirect('http://localhost:8588/moneycontrol')
-    }
-      
-  }
-
-  else{
-
-    const postvideo = async () => {
+  const postvideo = async () => {
       const { username, password } = process.env
       const ig = new IgApiClient()
       try {
@@ -393,29 +268,17 @@ app.post('/postvideo', function (req, res) {
 
           newsObject[objectInd].postVideo = 'yes'
           fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-          alert('Video  Posted')
-          if(webId === 1 ){
-            res.redirect('http://localhost:8588/theeconomictimes')
-          }
-          if(webId === 2 ){
-            res.redirect('http://localhost:8588/financialexpress')
-          }
-          if(webId === 3 ){
-            res.redirect('http://localhost:8588/moneycontrol')
-          }
-
+          res.end('Video  Posted')
         }
       } catch (error) {
           console.log(error)
       }
-    }
-    postvideo()
   }
-
+  postvideo()
 })
 
 
-cron.schedule('48 13 * * *', function () {
+cron.schedule('19 13 * * *', function () {
 
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
