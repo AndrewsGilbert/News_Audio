@@ -1,6 +1,46 @@
+async function front (button) {
+  const refnewslayoutdiv = document.getElementById('newslayout')
 
-async function display (id, button, buttonBGMclr, parentDivId) {
-  // button.disabled = true
+  if (refnewslayoutdiv === null) {
+    const url = 'http://localhost:8588/getjson'
+    const res = await fetch(url)
+    const contentJson = await res.json()
+    const web = contentJson.web
+
+    const layoutDiv = document.getElementById('layout')
+
+    const newsLayoutDiv = document.createElement('div')
+    newsLayoutDiv.id = 'newslayout'
+    newsLayoutDiv.style.display = 'block'
+
+    layoutDiv.appendChild(newsLayoutDiv)
+
+    for (let i = 0; i < web.length; i++) {
+      const webId = web[i].id
+      const parentDivId = `newswebdiv${webId}`
+      const webname = web[i].name
+
+      const newswebDiv = document.createElement('div')
+      const newswebButtonDiv = document.createElement('BUTTON')
+
+      newswebDiv.id = parentDivId
+      newswebButtonDiv.id = `newswebbuttondiv${webId}`
+      newswebButtonDiv.className = `button nbd${webId}`
+      newswebButtonDiv.innerHTML = webname
+      newswebButtonDiv.setAttribute('onClick', `display(${webId},${parentDivId})`)
+
+      newswebDiv.appendChild(newswebButtonDiv)
+      newsLayoutDiv.appendChild(newswebDiv)
+    }
+  } else if (refnewslayoutdiv !== null && refnewslayoutdiv.style.display === 'none') {
+    refnewslayoutdiv.style.display = 'block'
+  } else if (refnewslayoutdiv !== null && refnewslayoutdiv.style.display === 'block') {
+    refnewslayoutdiv.style.display = 'none'
+  }
+}
+
+async function display (id, div) {
+  const parentDivId = div.id
 
   const refMainNewsDiv = document.getElementById(`mainnews${id}`)
 
@@ -55,10 +95,10 @@ async function display (id, button, buttonBGMclr, parentDivId) {
       addNewsTextbox.id = `addNewstext${id}`
 
       newsDiv.className = 'ntext'
-      audioButton.className = `text font2 ${buttonBGMclr}`
-      videoButton.className = `text font2 ${buttonBGMclr}`
-      postButton.className = `text font2 ${buttonBGMclr}`
-      addNewsButton.className = `text font2 ${buttonBGMclr}`
+      audioButton.className = `text font2 tc${id}`
+      videoButton.className = `text font2 tc${id}`
+      postButton.className = `text font2 tc${id}`
+      addNewsButton.className = `text font2 tc${id}`
       addNewsTextbox.className = 'addnewsinput'
 
       newsDiv.innerHTML = result
@@ -69,8 +109,7 @@ async function display (id, button, buttonBGMclr, parentDivId) {
 
       MainNewsDiv.style.display = 'block'
 
-      if (newsObject[index].audioGen === 'yes') { addNewsDiv.style.display = 'none' }
-      else { addNewsDiv.style.display = 'block' }
+      if (newsObject[index].audioGen === 'yes') { addNewsDiv.style.display = 'none' } else { addNewsDiv.style.display = 'block' }
 
       audioButton.setAttribute('onClick', `audioGen(${index}, ${id})`)
       videoButton.setAttribute('onClick', `videoGen(${index}, ${id})`)
