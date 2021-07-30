@@ -2,10 +2,9 @@
 async function display (id, button, buttonBGMclr, parentDivId) {
   // button.disabled = true
 
-  const refnewsDiv = document.getElementById(`news${id}`)
-  const refbuttonDiv = document.getElementById(`nextprocess${id}`)
+  const refMainNewsDiv = document.getElementById(`mainnews${id}`)
 
-  if (refnewsDiv === null) {
+  if (refMainNewsDiv === null) {
     const url = 'http://localhost:8588/getjson'
     const res = await fetch(url)
     const contentJson = await res.json()
@@ -36,48 +35,73 @@ async function display (id, button, buttonBGMclr, parentDivId) {
     function present () {
       const parentDiv = document.getElementById(parentDivId)
 
+      const MainNewsDiv = document.createElement('div')
+
       const newsDiv = document.createElement('div')
       const buttonDiv = document.createElement('div')
+      const addNewsDiv = document.createElement('div')
+
       const audioButton = document.createElement('BUTTON')
       const videoButton = document.createElement('BUTTON')
       const postButton = document.createElement('BUTTON')
 
+      const addNewsButton = document.createElement('BUTTON')
+      const addNewsTextbox = document.createElement('INPUT')
+
+      MainNewsDiv.id = `mainnews${id}`
       newsDiv.id = `news${id}`
       buttonDiv.id = `nextprocess${id}`
+      addNewsDiv.id = `addnews${id}`
+      addNewsTextbox.id = `addNewstext${id}`
 
       newsDiv.className = 'ntext'
       audioButton.className = `text font2 ${buttonBGMclr}`
       videoButton.className = `text font2 ${buttonBGMclr}`
       postButton.className = `text font2 ${buttonBGMclr}`
+      addNewsButton.className = `text font2 ${buttonBGMclr}`
+      addNewsTextbox.className = 'addnewsinput'
 
       newsDiv.innerHTML = result
       audioButton.innerHTML = 'Generate the Audio'
       videoButton.innerHTML = 'Generate the Video'
       postButton.innerHTML = 'Post Video'
+      addNewsButton.innerHTML = 'Add News'
 
-      newsDiv.style.display = 'block'
-      buttonDiv.style.display = 'block'
+      MainNewsDiv.style.display = 'block'
 
-      audioButton.setAttribute('onClick', `audioGen(${index})`)
-      videoButton.setAttribute('onClick', `videoGen(${index})`)
-      postButton.setAttribute('onClick', `postVideo(${index})`)
+      if (newsObject[index].audioGen === 'yes') { addNewsDiv.style.display = 'none' }
+      else { addNewsDiv.style.display = 'block' }
+
+      audioButton.setAttribute('onClick', `audioGen(${index}, ${id})`)
+      videoButton.setAttribute('onClick', `videoGen(${index}, ${id})`)
+      postButton.setAttribute('onClick', `postVideo(${index}, ${id})`)
+      addNewsButton.setAttribute('onClick', `addNews(${index}, ${id})`)
+      addNewsTextbox.setAttribute('type', 'text')
 
       buttonDiv.appendChild(audioButton)
       buttonDiv.appendChild(videoButton)
       buttonDiv.appendChild(postButton)
-      parentDiv.appendChild(newsDiv)
-      parentDiv.appendChild(buttonDiv)
+
+      addNewsDiv.appendChild(addNewsTextbox)
+      addNewsDiv.appendChild(addNewsButton)
+
+      MainNewsDiv.appendChild(newsDiv)
+      MainNewsDiv.appendChild(addNewsDiv)
+      MainNewsDiv.appendChild(buttonDiv)
+
+      parentDiv.appendChild(MainNewsDiv)
     }
-  } else if (refnewsDiv !== null && refnewsDiv.style.display === 'none') {
-    refnewsDiv.style.display = 'block'
-    refbuttonDiv.style.display = 'block'
-  } else if (refnewsDiv !== null && refnewsDiv.style.display === 'block') {
-    refnewsDiv.style.display = 'none'
-    refbuttonDiv.style.display = 'none'
+  } else if (refMainNewsDiv !== null && refMainNewsDiv.style.display === 'none') {
+    refMainNewsDiv.style.display = 'block'
+  } else if (refMainNewsDiv !== null && refMainNewsDiv.style.display === 'block') {
+    refMainNewsDiv.style.display = 'none'
   }
 }
 
-async function audioGen (index) {
+async function audioGen (index, id) {
+  const refaddNewsDiv = document.getElementById(`addnews${id}`)
+  refaddNewsDiv.style.display = 'none'
+
   const url = 'http://localhost:8588/getjson'
   const res = await fetch(url)
   const contentJson = await res.json()
@@ -132,4 +156,37 @@ async function postVideo (index) {
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
     xhttp.send(`ind=${index}`)
   }
+}
+
+async function addNews (ind, id) {
+  const getNews = document.getElementById(`addNewstext${id}`).value
+  document.getElementById(`addNewstext${id}`).value = ''
+  const url = 'http://localhost:8588/getjson'
+  const res = await fetch(url)
+  const contentJson = await res.json()
+  const newsObject = contentJson.newsObject
+  const objectInd = ind
+  const newsDet = newsObject[objectInd].newsDet
+  const newsId = newsObject[objectInd].newsId
+  const index = newsDet.length
+
+  let result = document.getElementById(`news${id}`).innerHTML
+  result += `<br> ${index + 1}. ${getNews} <br>`
+  document.getElementById(`news${id}`).innerHTML = result
+
+  const date = new Date().toString().replace(/[{(+)}]|GMT|0530|India Standard Time| /g, '')
+  const fileName = 'voice/NewsId:' + newsId + '-index:' + index + '-' + date + '.wav'
+
+  const detail = {}
+  detail.text = getNews
+  detail.audio = fileName
+  newsDet[index] = detail
+
+  const xhttp = new XMLHttpRequest()
+  xhttp.onload = function () {
+    alert(this.responseText)
+  }
+  xhttp.open('POST', 'http://localhost:8588/updatejson')
+  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+  xhttp.send(`data=${JSON.stringify(contentJson)}`)
 }

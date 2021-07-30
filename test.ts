@@ -277,6 +277,14 @@ app.post('/postvideo', function (req, res) {
   postvideo()
 })
 
+app.post('/updatejson', function (req, res) {
+
+  const contentJson = JSON.parse(req.body.data)
+  fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
+  res.end('News Updated')
+
+})
+
 
 cron.schedule('19 13 * * *', function () {
 
