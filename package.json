@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node test.ts",
-    "build": "tsc",
-    "build:watch": "tsc --watch"
+    "test": "ts-node test.ts"
   },
   "author": "",
   "license": "ISC",
