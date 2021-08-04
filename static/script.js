@@ -109,7 +109,9 @@ async function display (id, div) {
 
       MainNewsDiv.style.display = 'block'
 
-      if (newsObject[index].audioGen === 'yes') { addNewsDiv.style.display = 'none' } else { addNewsDiv.style.display = 'block' }
+      if (newsObject[index].audioGen === 'yes') {
+        addNewsDiv.style.display = 'none'
+      } else { addNewsDiv.style.display = 'block' }
 
       audioButton.setAttribute('onClick', `audioGen(${index}, ${id})`)
       videoButton.setAttribute('onClick', `videoGen(${index}, ${id})`)
@@ -126,9 +128,16 @@ async function display (id, div) {
 
       MainNewsDiv.appendChild(newsDiv)
       MainNewsDiv.appendChild(addNewsDiv)
-      MainNewsDiv.appendChild(buttonDiv)
 
+      const displayVid = document.createElement('div')
+      displayVid.id = `displayviddiv${id}`
+      MainNewsDiv.appendChild(displayVid)
+      MainNewsDiv.appendChild(buttonDiv)
       parentDiv.appendChild(MainNewsDiv)
+
+      if (newsObject[index].videoGen === 'yes') {
+        displayVideo(contentJson, index)
+      }
     }
   } else if (refMainNewsDiv !== null && refMainNewsDiv.style.display === 'none') {
     refMainNewsDiv.style.display = 'block'
@@ -171,6 +180,7 @@ async function videoGen (index) {
     const xhttp = new XMLHttpRequest()
     xhttp.onload = function () {
       alert(this.responseText)
+      displayVideo(contentJson, index)
     }
     xhttp.open('POST', 'http://localhost:8588/generatevideo')
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
@@ -228,4 +238,22 @@ async function addNews (ind, id) {
   xhttp.open('POST', 'http://localhost:8588/updatejson')
   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
   xhttp.send(`data=${JSON.stringify(contentJson)}`)
+}
+
+function displayVideo (contentJson, index) {
+  const id = contentJson.newsObject[index].webId
+  const filename = contentJson.newsObject[index].oneaudio
+
+  const disvidediv = document.getElementById(`displayviddiv${id}`)
+  const heading = document.createElement('h2')
+  const video = document.createElement('VIDEO')
+
+  heading.innerHTML = '<br> The Generated Video is below <br>'
+  video.className = 'video'
+  video.setAttribute('controls', 'controls')
+  video.setAttribute('type', 'video/mp4')
+  video.setAttribute('src', filename)
+
+  disvidediv.appendChild(heading)
+  disvidediv.appendChild(video)
 }

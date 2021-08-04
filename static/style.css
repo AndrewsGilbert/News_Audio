@@ -99,3 +99,8 @@
   border-radius: 5px;
   border-width: 10px 10px;
 } 
+
+.video{
+  width: 500px;
+  height:300px;
+}

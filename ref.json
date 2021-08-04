@@ -153,10 +153,10 @@
           "audio": "voice/NewsId:4-index:4-ThuJul29202113:19:00.wav"
         }
       ],
-      "oneaudio": "video/NewsId:4",
-      "audioGen": "no",
-      "videoGen": "no",
-      "postVideo": "no"
+      "oneaudio": "video/NewsId:4.mp4",
+      "audioGen": "yes",
+      "videoGen": "yes",
+      "postVideo": "yes"
     },
     {
       "webId": 2,
