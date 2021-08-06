@@ -136,7 +136,7 @@ async function display (id, div) {
       parentDiv.appendChild(MainNewsDiv)
 
       if (newsObject[index].videoGen === 'yes') {
-        displayVideo(contentJson, index)
+        displayVideo(newsObject[index].webId, newsObject[index].oneaudio)
       }
     }
   } else if (refMainNewsDiv !== null && refMainNewsDiv.style.display === 'none') {
@@ -158,13 +158,14 @@ async function audioGen (index, id) {
 
   if (newsObject[objectInd].audioGen === 'yes') { alert('Audio Already Generated') } else {
     alert('Audio Generation started')
-    const xhttp = new XMLHttpRequest()
-    xhttp.onload = function () {
-      alert(this.responseText)
-    }
-    xhttp.open('POST', 'http://localhost:8588/generateaudio')
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-    xhttp.send(`ind=${index}`)
+    const data = {"ind":index}
+    const sendreq = await fetch ('http://localhost:8588/generateaudio', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    const response = await sendreq.text()
+    alert(response)
   }
 }
 
@@ -177,14 +178,15 @@ async function videoGen (index) {
 
   if (newsObject[objectInd].videoGen === 'yes') { alert('Video Already Generated') } else if (newsObject[objectInd].audioGen === 'no') { alert('Audio is not yet Generated') } else {
     alert('Video Generation started')
-    const xhttp = new XMLHttpRequest()
-    xhttp.onload = function () {
-      alert(this.responseText)
-      displayVideo(contentJson, index)
-    }
-    xhttp.open('POST', 'http://localhost:8588/generatevideo')
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-    xhttp.send(`ind=${index}`)
+    const data = {"ind":index}
+    const sendreq = await fetch ('http://localhost:8588/generatevideo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    })
+    const response = await sendreq.text()
+    alert(response)
+    displayVideo(newsObject[index].webId, `${newsObject[index].oneaudio}.mp4`)
   }
 }
 
@@ -197,13 +199,14 @@ async function postVideo (index) {
 
   if (newsObject[objectInd].postVideo === 'yes') { alert('Video Already Posted') } else if (newsObject[objectInd].videoGen === 'no') { alert('Video is not yet Generated') } else {
     alert('Video Posting started')
-    const xhttp = new XMLHttpRequest()
-    xhttp.onload = function () {
-      alert(this.responseText)
-    }
-    xhttp.open('POST', 'http://localhost:8588/postvideo')
-    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-    xhttp.send(`ind=${index}`)
+    const data = {"ind":index}
+    const sendreq = await fetch ('http://localhost:8588/postvideo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    })
+    const response = await sendreq.text()
+    alert(response)
   }
 }
 
@@ -231,19 +234,16 @@ async function addNews (ind, id) {
   detail.audio = fileName
   newsDet[index] = detail
 
-  const xhttp = new XMLHttpRequest()
-  xhttp.onload = function () {
-    alert(this.responseText)
-  }
-  xhttp.open('POST', 'http://localhost:8588/updatejson')
-  xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-  xhttp.send(`data=${JSON.stringify(contentJson)}`)
+  const sendreq = await fetch ('http://localhost:8588/updatejson', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json'},
+    body: JSON.stringify(contentJson)
+  })
+  const response = await sendreq.text()
+  alert(response)
 }
 
-function displayVideo (contentJson, index) {
-  const id = contentJson.newsObject[index].webId
-  const filename = contentJson.newsObject[index].oneaudio
-
+function displayVideo (id, filename) {
   const disvidediv = document.getElementById(`displayviddiv${id}`)
   const heading = document.createElement('h2')
   const video = document.createElement('VIDEO')

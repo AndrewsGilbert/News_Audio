@@ -6,7 +6,7 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import cron from 'node-cron'
 import { exec } from 'child_process'
-import alert from 'alert'
+import cors from 'cors'
 
 import { IgApiClient } from 'instagram-private-api'
 require('dotenv').config()
@@ -17,7 +17,10 @@ const readFileAsync = util.promisify(fs.readFile)
 
 const app = express()
 
+app.use(cors())
+
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname,'/')))
 
@@ -73,7 +76,7 @@ app.post('/generateaudio', function (req, res) {
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.ind)
+  const objectInd = req.body.ind
   let newsInd:number  = 0
  
 
@@ -162,7 +165,7 @@ app.post('/generateaudio', function (req, res) {
             console.log(`stdout: ${stdout}`)
             newsObject[objectInd].audioGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            res.end('Audio Generated')
+            res.send('Audio Generated')
             resolve('Audio Generated')
           }
         })
@@ -171,12 +174,14 @@ app.post('/generateaudio', function (req, res) {
   } 
 })
 
+
+
 app.post('/generatevideo', function (req, res) {
 
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.ind)
+  const objectInd = req.body.ind
   const fileName:string = newsObject[objectInd].oneaudio
   const video:string = `ffmpeg  -stream_loop -1 -i video.mp4 -i ${fileName}.wav -shortest -map 0:v:0 -map 1:a:0 -y ${fileName}:old.mp4`
 
@@ -225,7 +230,7 @@ app.post('/generatevideo', function (req, res) {
             newsObject[objectInd].oneaudio = filepath
             newsObject[objectInd].videoGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            res.end('Video  Generated')
+            res.send('Video  Generated')
             resolve('Video Generated')
           }
         })
@@ -242,7 +247,7 @@ app.post('/postvideo', function (req, res) {
   const contentJson: content = JSON.parse(content)
   const web: Array<web> = contentJson.web
   const newsObject: Array<news> = contentJson.newsObject
-  const objectInd = Number(req.body.ind)
+  const objectInd = req.body.ind
   const webId:number = newsObject[objectInd].webId
   const fileName:string = newsObject[objectInd].oneaudio
 
@@ -268,7 +273,7 @@ app.post('/postvideo', function (req, res) {
 
           newsObject[objectInd].postVideo = 'yes'
           fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-          res.end('Video  Posted')
+          res.send('Video  Posted')
         }
       } catch (error) {
           console.log(error)
@@ -279,9 +284,9 @@ app.post('/postvideo', function (req, res) {
 
 app.post('/updatejson', function (req, res) {
 
-  const contentJson = JSON.parse(req.body.data)
+  const contentJson = req.body
   fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-  res.end('News Updated')
+  res.send('News Updated')
 
 })
 
