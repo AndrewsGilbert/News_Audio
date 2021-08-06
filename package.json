@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "alert": "^5.0.10",
     "audio-loader": "*",
     "audioconcat": "*",
     "body-parser": "*",
     "cheerio": "*",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "*",
     "file-system": "*",
@@ -27,6 +27,7 @@
     "util.promisify": "^1.1.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
     "@types/express": "*",
     "@types/node-cron": "*",
     "@types/node-fetch": "*",
