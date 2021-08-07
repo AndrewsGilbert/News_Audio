@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
   
 })
 
-app.get('/getjson', function (req, res) {
+app.post('/getjson', function (req, res) {
 
   const content: string = fs.readFileSync('ref.json', 'utf8')
   const contentJson: content = JSON.parse(content)
@@ -165,7 +165,8 @@ app.post('/generateaudio', function (req, res) {
             console.log(`stdout: ${stdout}`)
             newsObject[objectInd].audioGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            res.send('Audio Generated')
+            const result = {"result":"Audio Generated'"}
+            res.json(result)
             resolve('Audio Generated')
           }
         })
@@ -230,7 +231,8 @@ app.post('/generatevideo', function (req, res) {
             newsObject[objectInd].oneaudio = filepath
             newsObject[objectInd].videoGen = 'yes'
             fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-            res.send('Video  Generated')
+            const result = {"result":"Video Generated'"}
+            res.json(result)
             resolve('Video Generated')
           }
         })
@@ -273,7 +275,8 @@ app.post('/postvideo', function (req, res) {
 
           newsObject[objectInd].postVideo = 'yes'
           fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-          res.send('Video  Posted')
+          const result = {"result":"Video Posted'"}
+          res.json(result)
         }
       } catch (error) {
           console.log(error)
@@ -286,8 +289,8 @@ app.post('/updatejson', function (req, res) {
 
   const contentJson = req.body
   fs.writeFileSync('ref.json', JSON.stringify(contentJson, null, 2), 'utf8')
-  res.send('News Updated')
-
+  const result = {"result":"News Updated"}
+  res.json(result)
 })
 
 
