@@ -1,13 +1,12 @@
+const loaddiv = document.getElementById('load')
+const layoutDiv = document.getElementById('layout')
+
 async function front (button) {
   const refnewslayoutdiv = document.getElementById('newslayout')
 
   if (refnewslayoutdiv === null) {
-    const url = 'http://localhost:8588/getjson'
-    const res = await fetch(url)
-    const contentJson = await res.json()
+    const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
     const web = contentJson.web
-
-    const layoutDiv = document.getElementById('layout')
 
     const newsLayoutDiv = document.createElement('div')
     newsLayoutDiv.id = 'newslayout'
@@ -45,9 +44,7 @@ async function display (id, div) {
   const refMainNewsDiv = document.getElementById(`mainnews${id}`)
 
   if (refMainNewsDiv === null) {
-    const url = 'http://localhost:8588/getjson'
-    const res = await fetch(url)
-    const contentJson = await res.json()
+    const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
     const web = contentJson.web
     const newsObject = contentJson.newsObject
     let index = newsObject.length - web.length
@@ -150,72 +147,61 @@ async function audioGen (index, id) {
   const refaddNewsDiv = document.getElementById(`addnews${id}`)
   refaddNewsDiv.style.display = 'none'
 
-  const url = 'http://localhost:8588/getjson'
-  const res = await fetch(url)
-  const contentJson = await res.json()
+  const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
   const newsObject = contentJson.newsObject
   const objectInd = index
 
   if (newsObject[objectInd].audioGen === 'yes') { alert('Audio Already Generated') } else {
     alert('Audio Generation started')
+    layoutDiv.className = 'hide'
+    loaddiv.className = 'show'
     const data = {"ind":index}
-    const sendreq = await fetch ('http://localhost:8588/generateaudio', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    const response = await sendreq.text()
-    alert(response)
+    const response = await fetchfunction('http://localhost:8588/generateaudio', data)
+    layoutDiv.className = 'show'
+    loaddiv.className = 'hide'
+    alert(response.result)
   }
 }
 
 async function videoGen (index) {
-  const url = 'http://localhost:8588/getjson'
-  const res = await fetch(url)
-  const contentJson = await res.json()
+  const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
   const newsObject = contentJson.newsObject
   const objectInd = index
 
   if (newsObject[objectInd].videoGen === 'yes') { alert('Video Already Generated') } else if (newsObject[objectInd].audioGen === 'no') { alert('Audio is not yet Generated') } else {
     alert('Video Generation started')
+    layoutDiv.className = 'hide'
+    loaddiv.className = 'show'
     const data = {"ind":index}
-    const sendreq = await fetch ('http://localhost:8588/generatevideo', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    })
-    const response = await sendreq.text()
-    alert(response)
+    const response = await fetchfunction('http://localhost:8588/generatevideo', data)
+    layoutDiv.className = 'show'
+    loaddiv.className = 'hide'
+    alert(response.result)
     displayVideo(newsObject[index].webId, `${newsObject[index].oneaudio}.mp4`)
   }
 }
 
 async function postVideo (index) {
-  const url = 'http://localhost:8588/getjson'
-  const res = await fetch(url)
-  const contentJson = await res.json()
+  const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
   const newsObject = contentJson.newsObject
   const objectInd = index
 
   if (newsObject[objectInd].postVideo === 'yes') { alert('Video Already Posted') } else if (newsObject[objectInd].videoGen === 'no') { alert('Video is not yet Generated') } else {
     alert('Video Posting started')
+    layoutDiv.className = 'hide'
+    loaddiv.className = 'show'
     const data = {"ind":index}
-    const sendreq = await fetch ('http://localhost:8588/postvideo', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
-    })
-    const response = await sendreq.text()
-    alert(response)
+    const response = await fetchfunction('http://localhost:8588/postvideo', data)
+    layoutDiv.className = 'show'
+    loaddiv.className = 'hide'
+    alert(response.result)
   }
 }
 
 async function addNews (ind, id) {
   const getNews = document.getElementById(`addNewstext${id}`).value
   document.getElementById(`addNewstext${id}`).value = ''
-  const url = 'http://localhost:8588/getjson'
-  const res = await fetch(url)
-  const contentJson = await res.json()
+  const contentJson = await fetchfunction('http://localhost:8588/getjson', {})
   const newsObject = contentJson.newsObject
   const objectInd = ind
   const newsDet = newsObject[objectInd].newsDet
@@ -234,13 +220,8 @@ async function addNews (ind, id) {
   detail.audio = fileName
   newsDet[index] = detail
 
-  const sendreq = await fetch ('http://localhost:8588/updatejson', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json'},
-    body: JSON.stringify(contentJson)
-  })
-  const response = await sendreq.text()
-  alert(response)
+  const response = await fetchfunction('http://localhost:8588/updatejson', contentJson)
+  alert(response.result)
 }
 
 function displayVideo (id, filename) {
@@ -256,4 +237,14 @@ function displayVideo (id, filename) {
 
   disvidediv.appendChild(heading)
   disvidediv.appendChild(video)
+}
+
+async function fetchfunction (url, body) {
+  const sendreq = await fetch (url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  })
+  const fetchobject = await sendreq.json()
+  return fetchobject
 }

@@ -184,7 +184,7 @@
         }
       ],
       "oneaudio": "video/NewsId:5",
-      "audioGen": "no",
+      "audioGen": "yes",
       "videoGen": "no",
       "postVideo": "no"
     },
